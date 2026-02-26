@@ -554,174 +554,325 @@
             </div>
         </div>
     </section>
-    <!-- CODING STATS SECTION -->
-    <section id="coding-stats" class="py-12 bg-neo-black text-white border-y-4 border-neo-black relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20"
-            style="background-image: linear-gradient(rgba(6,182,212,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(6,182,212,0.3) 1px, transparent 1px); background-size: 40px 40px;">
+
+    <!-- Notable Achievements - Certificate Wall: gradient flows with page (white → cream → yellow) -->
+    <section id="achievements" class="py-24 relative overflow-hidden border-y-4 border-neo-black" style="background: linear-gradient(180deg, #FFFFFF 0%, #FFFBEB 15%, #FEF3C7 40%, #FDE68A 70%, #FBBF24 100%);">
+        <div class="absolute inset-0 opacity-40" style="background-image: repeating-linear-gradient(135deg, transparent, transparent 60px, rgba(236,72,153,0.06) 60px, rgba(236,72,153,0.06) 61px), repeating-linear-gradient(-45deg, transparent, transparent 60px, rgba(251,191,36,0.08) 60px, rgba(251,191,36,0.08) 61px);"></div>
+        <div class="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-neo-yellow/20"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-neo-black/5 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <h2 class="text-5xl md:text-8xl font-black uppercase mb-4 tracking-tighter text-center text-neo-black" style="text-shadow: 3px 3px 0 rgba(236,72,153,0.3);">
+                Notable<span class="text-neo-pink">_</span>Achievements
+            </h2>
+            <p class="font-mono text-center text-neo-black/70 mb-12 max-w-xl mx-auto">Awards & recognitions</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Certificate card template: framed cert with ribbon -->
+                <!-- 1. Pat on the Back Award - Mar 2025 -->
+                <article class="reveal group relative">
+                    <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-8 bg-neo-pink border-2 border-neo-black rounded-t-lg flex items-center justify-center shadow-hard-sm z-10">
+                        <i class="ri-award-fill text-neo-black text-lg"></i>
+                    </div>
+                    <div class="bg-white border-4 border-neo-black pt-6 pb-0 shadow-hard hover:shadow-hard-xl transition-all overflow-hidden">
+                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-yellow/30 to-neo-pink/20 flex items-center justify-center border-2 border-neo-black relative overflow-hidden">
+                            <img src="assets/certificates/pat-on-back-2025.png" alt="Pat on the Back Award 2025" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
+                            <div class="absolute inset-0 hidden flex-col items-center justify-center gap-2 text-neo-black/60 bg-white/80 cert-fallback">
+                                <i class="ri-award-line text-5xl"></i>
+                                <span class="font-mono text-sm">Add certificate image</span>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-2 border-t-2 border-dashed border-neo-black/20 bg-neo-white/50">
+                            <h3 class="font-black text-lg uppercase text-neo-black mb-1">Pat on the Back Award</h3>
+                            <p class="font-mono text-xs text-neo-black/70">Honored by Tech Mahindra · Mar 2025</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. WatsonX Challenge 1st Prize - Oct 2023 -->
+                <article class="reveal group relative">
+                    <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-8 bg-neo-blue border-2 border-neo-black rounded-t-lg flex items-center justify-center shadow-hard-sm z-10">
+                        <i class="ri-trophy-fill text-neo-black text-lg"></i>
+                    </div>
+                    <div class="bg-white border-4 border-neo-black pt-6 pb-0 shadow-hard hover:shadow-hard-xl transition-all overflow-hidden">
+                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-blue/20 to-neo-purple/20 flex items-center justify-center border-2 border-neo-black relative overflow-hidden">
+                            <img src="assets/certificates/watsonx-challenge-2023.png" alt="WatsonX Challenge 1st Prize" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
+                            <div class="absolute inset-0 hidden flex-col items-center justify-center gap-2 text-neo-black/60 bg-white/80 cert-fallback">
+                                <i class="ri-trophy-line text-5xl"></i>
+                                <span class="font-mono text-sm">Add certificate image</span>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-2 border-t-2 border-dashed border-neo-black/20 bg-neo-white/50">
+                            <h3 class="font-black text-lg uppercase text-neo-black mb-1">1st Prize, WatsonX Challenge for GSI</h3>
+                            <p class="font-mono text-xs text-neo-black/70">Awarded by IBM · Oct 2023</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Standing Ovation Award - Jun 2023 -->
+                <article class="reveal group relative">
+                    <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-8 bg-neo-red border-2 border-neo-black rounded-t-lg flex items-center justify-center shadow-hard-sm z-10">
+                        <i class="ri-medal-fill text-neo-black text-lg"></i>
+                    </div>
+                    <div class="bg-white border-4 border-neo-black pt-6 pb-0 shadow-hard hover:shadow-hard-xl transition-all overflow-hidden">
+                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-pink/20 to-neo-red/20 flex items-center justify-center border-2 border-neo-black relative overflow-hidden">
+                            <img src="assets/certificates/standing-ovation-2023.png" alt="Standing Ovation Award" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
+                            <div class="absolute inset-0 hidden flex-col items-center justify-center gap-2 text-neo-black/60 bg-white/80 cert-fallback">
+                                <i class="ri-medal-line text-5xl"></i>
+                                <span class="font-mono text-sm">Add certificate image</span>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-2 border-t-2 border-dashed border-neo-black/20 bg-neo-white/50">
+                            <h3 class="font-black text-lg uppercase text-neo-black mb-1">Standing Ovation Award</h3>
+                            <p class="font-mono text-xs text-neo-black/70">Recognized by Tech Mahindra · Jun 2023</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Pat on the Back Award - Nov 2022 -->
+                <article class="reveal group relative">
+                    <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-8 bg-neo-purple border-2 border-neo-black rounded-t-lg flex items-center justify-center shadow-hard-sm z-10">
+                        <i class="ri-award-fill text-white text-lg"></i>
+                    </div>
+                    <div class="bg-white border-4 border-neo-black pt-6 pb-0 shadow-hard hover:shadow-hard-xl transition-all overflow-hidden">
+                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-purple/20 to-neo-blue/20 flex items-center justify-center border-2 border-neo-black relative overflow-hidden">
+                            <img src="assets/certificates/pat-on-back-2022.png" alt="Pat on the Back Award 2022" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
+                            <div class="absolute inset-0 hidden flex-col items-center justify-center gap-2 text-neo-black/60 bg-white/80 cert-fallback">
+                                <i class="ri-award-line text-5xl"></i>
+                                <span class="font-mono text-sm">Add certificate image</span>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-2 border-t-2 border-dashed border-neo-black/20 bg-neo-white/50">
+                            <h3 class="font-black text-lg uppercase text-neo-black mb-1">Pat on the Back Award</h3>
+                            <p class="font-mono text-xs text-neo-black/70">Honored by Tech Mahindra · Nov 2022</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Best NSS Volunteer - Mar 2017 -->
+                <article class="reveal group relative">
+                    <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-8 bg-neo-green border-2 border-neo-black rounded-t-lg flex items-center justify-center shadow-hard-sm z-10">
+                        <i class="ri-user-heart-fill text-neo-black text-lg"></i>
+                    </div>
+                    <div class="bg-white border-4 border-neo-black pt-6 pb-0 shadow-hard hover:shadow-hard-xl transition-all overflow-hidden">
+                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-green/20 to-neo-yellow/30 flex items-center justify-center border-2 border-neo-black relative overflow-hidden">
+                            <img src="assets/certificates/best-nss-volunteer-2017.png" alt="Best NSS Volunteer" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
+                            <div class="absolute inset-0 hidden flex-col items-center justify-center gap-2 text-neo-black/60 bg-white/80 cert-fallback">
+                                <i class="ri-user-heart-line text-5xl"></i>
+                                <span class="font-mono text-sm">Add certificate image</span>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-2 border-t-2 border-dashed border-neo-black/20 bg-neo-white/50">
+                            <h3 class="font-black text-lg uppercase text-neo-black mb-1">Best NSS Volunteer</h3>
+                            <p class="font-mono text-xs text-neo-black/70">Maharshi Dayanand College, Parel · Mar 2017</p>
+                            <p class="font-mono text-[10px] text-neo-black/60 mt-1">Associated with University of Mumbai</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. Avhan Disaster Preparedness - Jun 2016 -->
+                <article class="reveal group relative">
+                    <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-8 bg-neo-orange border-2 border-neo-black rounded-t-lg flex items-center justify-center shadow-hard-sm z-10">
+                        <i class="ri-shield-check-fill text-neo-black text-lg"></i>
+                    </div>
+                    <div class="bg-white border-4 border-neo-black pt-6 pb-0 shadow-hard hover:shadow-hard-xl transition-all overflow-hidden">
+                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-orange/20 to-neo-yellow/30 flex items-center justify-center border-2 border-neo-black relative overflow-hidden">
+                            <img src="assets/certificates/avhan-disaster-2016.png" alt="Avhan Disaster Preparedness" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
+                            <div class="absolute inset-0 hidden flex-col items-center justify-center gap-2 text-neo-black/60 bg-white/80 cert-fallback">
+                                <i class="ri-shield-check-line text-5xl"></i>
+                                <span class="font-mono text-sm">Add certificate image</span>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-2 border-t-2 border-dashed border-neo-black/20 bg-neo-white/50">
+                            <h3 class="font-black text-lg uppercase text-neo-black mb-1">State Level Avhan Disaster Preparedness</h3>
+                            <p class="font-mono text-xs text-neo-black/70">Maharashtra State Govt. · Jun 2016</p>
+                            <p class="font-mono text-[10px] text-neo-black/60 mt-1">Represented University of Mumbai. Learned MFR (Medical First Responder) from NDRF force.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </div>
+    </section>
+
+    <!-- CODING STATS SECTION - System Monitor / Terminal Style -->
+    <section id="coding-stats" class="py-16 bg-neo-black text-white border-y-4 border-neo-black relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: linear-gradient(rgba(6,182,212,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(6,182,212,0.4) 1px, transparent 1px); background-size: 32px 32px;">
+        </div>
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neo-green/50 to-transparent"></div>
 
         <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <!-- Compact Header -->
-            <div class="flex justify-between items-center mb-6 border-b-2 border-white pb-3">
-                <h2 class="text-4xl md:text-5xl font-black uppercase text-white tracking-tight">
-                    CODING<span class="text-neo-green">_STATS</span>
+            <!-- Header -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+                <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter">
+                    <span class="text-white">DEV</span><span class="text-neo-green">_ACTIVITY</span>
                 </h2>
-                <div class="flex items-center gap-2">
-                    <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <p class="font-mono text-neo-green text-xs font-bold">LIVE</p>
+                <div class="flex items-center gap-3 flex-wrap">
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 bg-neo-green rounded-full animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.8)]"></div>
+                        <span class="font-mono text-neo-green text-xs font-bold uppercase tracking-widest">GitHub</span>
+                    </div>
+                    <div class="w-px h-4 bg-white/30"></div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 bg-neo-orange rounded-full animate-pulse shadow-[0_0_8px_rgba(249,115,22,0.6)]"></div>
+                        <span class="font-mono text-neo-orange text-xs font-bold uppercase tracking-widest">LeetCode</span>
+                    </div>
+                    <div class="w-px h-4 bg-white/30"></div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 bg-neo-blue rounded-full animate-pulse shadow-[0_0_8px_rgba(6,182,212,0.8)]"></div>
+                        <span class="font-mono text-neo-blue text-xs font-bold uppercase tracking-widest">WakaTime</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- Two Column Layout: GitHub | LeetCode -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:auto-rows-fr">
-                <!-- GitHub Column -->
-                <div class="reveal flex flex-col h-full">
-                    <div class="flex items-center gap-2 mb-4 border-b border-white/20 pb-2">
-                        <div class="w-8 h-8 bg-neo-green border-2 border-white flex items-center justify-center">
-                            <i class="ri-github-fill text-lg text-black"></i>
-                        </div>
-                        <h3 class="text-2xl font-black uppercase text-white">GITHUB</h3>
-                    </div>
-
-                    <!-- GitHub Block -->
-                    <div
-                        class="border-4 border-white/20 p-6 bg-neo-black flex-1 flex flex-col shadow-[8px_8px_0_rgba(15,23,42,1)] relative group">
-                        <!-- Profile Header -->
-                        <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
+            <!-- Row 1: GitHub + LeetCode -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch mb-6">
+                <!-- GitHub - Terminal Window -->
+                <div class="reveal group flex">
+                    <div class="bg-neo-black border-4 border-neo-green shadow-[6px_6px_0_rgba(16,185,129,0.5)] hover:shadow-[8px_8px_0_rgba(16,185,129,0.8)] transition-all duration-300 overflow-hidden flex flex-col flex-1 min-h-[480px] w-full">
+                        <div class="flex items-center justify-between px-4 py-2 bg-neo-green border-b-4 border-neo-black shrink-0">
                             <div class="flex items-center gap-3">
-                                <i class="ri-github-fill text-3xl text-neo-green"></i>
-                                <div>
-                                    <h4 class="text-xl font-black text-white leading-tight">dev-mauli</h4>
-                                    <p class="text-[10px] font-mono text-neo-green uppercase tracking-widest">Full Stack
-                                        Engineer</p>
+                                <div class="flex gap-1.5">
+                                    <span class="w-3 h-3 rounded-full bg-neo-red border-2 border-neo-black"></span>
+                                    <span class="w-3 h-3 rounded-full bg-neo-yellow border-2 border-neo-black"></span>
+                                    <span class="w-3 h-3 rounded-full bg-white border-2 border-neo-black"></span>
+                                </div>
+                                <span class="font-mono font-black text-neo-black text-sm">dev-mauli@github ~</span>
+                            </div>
+                            <i class="ri-github-fill text-2xl text-neo-black"></i>
+                        </div>
+                        <div class="p-5 flex-1 flex flex-col min-h-0">
+                            <div class="grid grid-cols-4 gap-2 mb-4 shrink-0">
+                                <div class="col-span-2 row-span-2 bg-neo-green/20 border-2 border-neo-green p-4 flex flex-col justify-center items-center hover:bg-neo-green/30 transition-all group/stat">
+                                    <span class="font-mono text-[9px] text-neo-green/90 uppercase tracking-widest mb-1">commits</span>
+                                    <span id="total-contributions" class="text-4xl font-black text-neo-green tabular-nums group-hover/stat:scale-105 transition-transform">--</span>
+                                </div>
+                                <div class="col-span-2 bg-neo-black border-2 border-neo-green/50 p-3 flex flex-col justify-center hover:border-neo-green transition-colors">
+                                    <span class="font-mono text-[8px] text-neo-green/70 uppercase">repos</span>
+                                    <span id="repos-count" class="text-2xl font-black text-white tabular-nums">--</span>
+                                </div>
+                                <div class="col-span-2 bg-neo-black border-2 border-neo-green/50 p-3 flex flex-col justify-center hover:border-neo-green transition-colors">
+                                    <span class="font-mono text-[8px] text-neo-green/70 uppercase">followers</span>
+                                    <span id="followers-count" class="text-2xl font-black text-white tabular-nums">--</span>
+                                </div>
+                                <div class="col-span-2 bg-neo-black border-l-4 border-neo-green p-3 flex items-center gap-2 hover:bg-white/5 transition-colors">
+                                    <i class="ri-calendar-line text-neo-green text-lg"></i>
+                                    <div>
+                                        <span class="font-mono text-[8px] text-neo-green/70 uppercase block">since</span>
+                                        <span id="created-at" class="text-sm font-black text-white tabular-nums">--</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="text-right">
-                                <div id="total-contributions"
-                                    class="text-2xl font-black text-neo-green tracking-tighter">--</div>
-                                <p class="text-[8px] font-mono text-gray-500 uppercase">Commits</p>
-                            </div>
-                        </div>
-
-                        <!-- Simplified Stats Grid (2x2) -->
-                        <div class="grid grid-cols-2 gap-4 mb-8 uppercase">
-                            <div
-                                class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(16,185,129,0.3)]">
-                                <div
-                                    class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">
-                                    Repositories</div>
-                                <div id="repos-count" class="text-white font-black text-3xl tracking-tighter">--</div>
-                            </div>
-                            <div
-                                class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(16,185,129,0.3)]">
-                                <div
-                                    class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">
-                                    Followers</div>
-                                <div id="followers-count" class="text-white font-black text-3xl tracking-tighter">--
+                            <div class="border-2 border-neo-green/30 overflow-hidden mb-4 group-hover:border-neo-green transition-colors">
+                                <div class="bg-neo-black px-3 py-1.5 border-b border-neo-green/20 flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 bg-neo-green rounded-full animate-pulse"></span>
+                                    <span class="font-mono text-[9px] text-neo-green/70 uppercase tracking-wider">activity_matrix</span>
                                 </div>
+                                <img src="https://ghchart.rshah.org/10B981/dev-mauli" alt="GitHub Contribution Graph" class="w-full h-auto block" />
                             </div>
-                            <div
-                                class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(16,185,129,0.3)]">
-                                <div
-                                    class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">
-                                    Commits</div>
-                                <div id="total-contributions-grid"
-                                    class="text-white font-black text-3xl tracking-tighter">--</div>
-                            </div>
-                            <div
-                                class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(16,185,129,0.3)]">
-                                <div
-                                    class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">
-                                    Joined</div>
-                                <div id="created-at"
-                                    class="text-white font-black text-xl tracking-tighter mt-1 leading-none">--</div>
-                            </div>
-                        </div>
-
-                        <!-- Activity Graph parallel to LeetCode Heatmap -->
-                        <div class="flex-1 flex flex-col justify-center mb-8">
-                            <div
-                                class="bg-neo-black border-2 border-neo-green/30 p-2 overflow-hidden shadow-[4px_4px_0_rgba(16,185,129,0.3)] group hover:border-neo-green transition-colors duration-500 relative">
-                                <!-- NeoBrutalist accent dot -->
-                                <div class="absolute top-1 right-1 w-1.5 h-1.5 bg-neo-green rounded-full animate-pulse">
-                                </div>
-                                <p class="text-[8px] font-mono text-neo-green/50 uppercase tracking-[0.2em] mb-1">
-                                    Matrix_Output</p>
-                                <img src="https://ghchart.rshah.org/33FF57/dev-mauli" alt="GitHub Contribution Graph"
-                                    class="w-full h-auto filter brightness-110" style="image-rendering: auto;" />
-                            </div>
-                        </div>
-
-                        <!-- Command Line Footer -->
-                        <div
-                            class="mt-auto flex items-center justify-between text-neo-green p-3 border-2 border-white/10 bg-neo-black font-mono text-[11px]">
-                            <div class="flex items-center gap-2">
-                                <span class="text-white/30">$</span>
-                                <span class="text-neo-green">gh --stats</span>
-                                <span class="animate-pulse">_</span>
-                            </div>
-                            <a href="https://github.com/dev-mauli" target="_blank"
-                                class="text-neo-green px-3 py-1 font-black uppercase border border-neo-green hover:bg-neo-green hover:text-black transition-all">
-                                VIEW_GH →
+                            <a href="https://github.com/dev-mauli" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2 font-mono text-sm font-bold text-neo-green border-2 border-neo-green px-4 py-2 hover:bg-neo-green hover:text-neo-black transition-all cursor-hover shrink-0">
+                                <i class="ri-external-link-line"></i> OPEN_GITHUB
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- LeetCode Column -->
-                <div class="reveal flex flex-col h-full">
-                    <div class="flex items-center gap-2 mb-4 border-b border-white/20 pb-2">
-                        <div class="w-8 h-8 bg-neo-orange border-2 border-white flex items-center justify-center">
-                            <i class="ri-code-box-fill text-lg text-black"></i>
-                        </div>
-                        <h3 class="text-2xl font-black uppercase text-white">LEETCODE</h3>
-                    </div>
-
-                    <!-- LeetCode Block -->
-                    <div
-                        class="border-4 border-white/20 p-6 bg-neo-black flex-1 flex flex-col shadow-[8px_8px_0_rgba(15,23,42,1)] relative group">
-                        <!-- Profile Header -->
-                        <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
+                <!-- LeetCode - Terminal Window -->
+                <div class="reveal group flex">
+                    <div class="bg-neo-black border-4 border-neo-orange shadow-[6px_6px_0_rgba(249,115,22,0.5)] hover:shadow-[8px_8px_0_rgba(249,115,22,0.8)] transition-all duration-300 overflow-hidden flex flex-col flex-1 min-h-[480px]">
+                        <div class="flex items-center justify-between px-4 py-2 bg-neo-orange border-b-4 border-neo-black shrink-0">
                             <div class="flex items-center gap-3">
-                                <i class="ri-code-box-fill text-3xl text-neo-orange"></i>
-                                <div>
-                                    <h4 class="text-xl font-black text-white leading-tight">dev-mauli</h4>
-                                    <p class="text-[10px] font-mono text-neo-orange uppercase tracking-widest">Developer
-                                        Portfolio</p>
+                                <div class="flex gap-1.5">
+                                    <span class="w-3 h-3 rounded-full bg-neo-red border-2 border-neo-black"></span>
+                                    <span class="w-3 h-3 rounded-full bg-neo-yellow border-2 border-neo-black"></span>
+                                    <span class="w-3 h-3 rounded-full bg-white border-2 border-neo-black"></span>
+                                </div>
+                                <span class="font-mono font-black text-neo-black text-sm">dev-mauli@leetcode ~</span>
+                            </div>
+                            <i class="ri-code-box-fill text-2xl text-neo-black"></i>
+                        </div>
+                        <div class="p-5 flex-1 flex flex-col min-h-0">
+                            <div class="grid grid-cols-2 gap-2 mb-4 shrink-0">
+                                <div class="bg-neo-black border-2 border-neo-orange/50 p-3 flex flex-col justify-center hover:border-neo-orange transition-colors">
+                                    <span class="font-mono text-[8px] text-neo-orange/70 uppercase">profile</span>
+                                    <span class="text-2xl font-black text-white">dev-mauli</span>
+                                </div>
+                                <div class="bg-neo-orange/20 border-2 border-neo-orange p-3 flex flex-col justify-center items-center hover:bg-neo-orange/30 transition-colors">
+                                    <span class="font-mono text-[8px] text-neo-orange/90 uppercase">status</span>
+                                    <span class="text-xl font-black text-neo-orange">ACTIVE</span>
                                 </div>
                             </div>
-                            <div class="text-right">
-                                <div class="text-2xl font-black text-neo-orange tracking-tighter">#Top</div>
-                                <p class="text-[8px] font-mono text-gray-500 uppercase">Ranking</p>
-                            </div>
-                        </div>
-
-                        <!-- Activity Box parallel to GitHub Matrix -->
-                        <div class="flex-1 flex flex-col justify-center mb-8">
-                            <div
-                                class="border-2 border-neo-orange/30 p-2 overflow-hidden bg-neo-black shadow-[4px_4px_0_rgba(249,115,22,0.3)] group hover:border-neo-orange transition-colors duration-500 relative">
-                                <!-- NeoBrutalist accent dot -->
-                                <div
-                                    class="absolute top-1 right-1 w-1.5 h-1.5 bg-neo-orange rounded-full animate-pulse">
+                            <div class="border-2 border-neo-orange/30 overflow-hidden flex-1 min-h-[120px] flex flex-col group-hover:border-neo-orange transition-colors">
+                                <div class="bg-neo-black px-3 py-1.5 border-b border-neo-orange/20 shrink-0 flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 bg-neo-orange rounded-full animate-pulse"></span>
+                                    <span class="font-mono text-[9px] text-neo-orange/70 uppercase tracking-wider">solve_heatmap</span>
                                 </div>
-                                <img src="https://leetcard.jacoblin.cool/dev-mauli?theme=dark&font=Ubuntu&ext=heatmap"
-                                    alt="LeetCode Stats" class="w-full h-auto object-contain filter contrast-125" />
+                                <div class="flex-1 min-h-0 overflow-hidden flex items-center">
+                                    <img src="https://leetcard.jacoblin.cool/dev-mauli?theme=dark&font=Ubuntu&ext=heatmap" alt="LeetCode Stats" class="w-full h-auto object-contain block" />
+                                </div>
                             </div>
-                        </div>
-
-                        <!-- Command Line Footer -->
-                        <div
-                            class="mt-auto flex items-center justify-between text-neo-orange p-3 border-2 border-white/10 bg-neo-black font-mono text-[11px]">
-                            <div class="flex items-center gap-2">
-                                <span class="text-white/30">$</span>
-                                <span class="text-neo-orange">leetcode --u</span>
-                                <span class="animate-pulse">_</span>
-                            </div>
-                            <a href="https://leetcode.com/u/dev-mauli/" target="_blank"
-                                class="text-neo-orange px-3 py-1 font-black uppercase border border-neo-orange hover:bg-neo-orange hover:text-black transition-all">
-                                VIEW_LC →
+                            <a href="https://leetcode.com/u/dev-mauli/" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2 font-mono text-sm font-bold text-neo-orange border-2 border-neo-orange px-4 py-2 mt-4 hover:bg-neo-orange hover:text-neo-black transition-all cursor-hover shrink-0">
+                                <i class="ri-external-link-line"></i> OPEN_LEETCODE
                             </a>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: WakaTime - Full Width -->
+            <div class="reveal group">
+                <div class="bg-neo-black border-4 border-neo-blue shadow-[6px_6px_0_rgba(6,182,212,0.5)] hover:shadow-[8px_8px_0_rgba(6,182,212,0.8)] transition-all duration-300 overflow-hidden">
+                    <div class="flex items-center justify-between px-4 py-2 bg-neo-blue border-b-4 border-neo-black">
+                        <div class="flex items-center gap-3">
+                            <div class="flex gap-1.5">
+                                <span class="w-3 h-3 rounded-full bg-neo-red border-2 border-neo-black"></span>
+                                <span class="w-3 h-3 rounded-full bg-neo-yellow border-2 border-neo-black"></span>
+                                <span class="w-3 h-3 rounded-full bg-white border-2 border-neo-black"></span>
+                            </div>
+                            <span class="font-mono font-black text-neo-black text-sm">dev_mauli@wakatime ~</span>
+                        </div>
+                        <i class="ri-time-line text-2xl text-neo-black"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+                            <div class="bg-neo-black border-2 border-neo-blue/50 p-4 flex flex-col justify-center hover:border-neo-blue transition-colors">
+                                <span class="font-mono text-[9px] text-neo-blue/70 uppercase">profile</span>
+                                <span class="text-2xl font-black text-white">dev_mauli</span>
+                            </div>
+                            <div class="bg-neo-blue/20 border-2 border-neo-blue p-4 flex flex-col justify-center items-center hover:bg-neo-blue/30 transition-colors">
+                                <span class="font-mono text-[9px] text-neo-blue/90 uppercase">coding_time</span>
+                                <span class="text-2xl font-black text-neo-blue">TRACKED</span>
+                            </div>
+                            <div class="bg-neo-black border-2 border-neo-blue/50 p-4 flex flex-col justify-center hover:border-neo-blue transition-colors">
+                                <span class="font-mono text-[9px] text-neo-blue/70 uppercase">status</span>
+                                <span class="text-xl font-black text-neo-blue">LIVE</span>
+                            </div>
+                            <div class="bg-neo-black border-l-4 border-neo-blue p-4 flex items-center gap-3 hover:bg-white/5 transition-colors">
+                                <i class="ri-bar-chart-box-line text-neo-blue text-2xl"></i>
+                                <div>
+                                    <span class="font-mono text-[9px] text-neo-blue/70 uppercase block">analytics</span>
+                                    <span class="text-sm font-black text-white">Languages · Projects · Editors</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- WakaTime JSON-driven visualization -->
+                        <div class="border-2 border-neo-blue/40 overflow-hidden group-hover:border-neo-blue transition-colors bg-neo-black/50">
+                            <div class="bg-neo-black px-4 py-2 border-b border-neo-blue/20 flex items-center gap-2">
+                                <span class="w-2 h-2 bg-neo-blue rounded-full animate-pulse"></span>
+                                <span class="font-mono text-[10px] text-neo-blue/80 uppercase tracking-wider">time_coding</span>
+                            </div>
+                            <div id="wakatime-viz" class="p-4 min-h-[200px]">
+                                <div class="flex items-center justify-center gap-2 text-neo-blue/60 py-12">
+                                    <span class="animate-pulse">●</span>
+                                    <span class="font-mono text-sm">loading...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://wakatime.com/@dev_mauli" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center justify-center gap-2 font-mono text-sm font-bold text-neo-blue border-2 border-neo-blue px-6 py-3 mt-4 hover:bg-neo-blue hover:text-neo-black transition-all cursor-hover">
+                            <i class="ri-external-link-line text-lg"></i> OPEN_WAKATIME
+                        </a>
                     </div>
                 </div>
             </div>
@@ -732,30 +883,26 @@
         <div class="max-w-7xl mx-auto">
             <h2 class="text-6xl md:text-9xl font-black mb-16 uppercase tracking-tighter text-white drop-shadow-[4px_4px_0_rgba(15,23,42,1)] text-stroke-black"
                 style="-webkit-text-stroke: 3px #0F172A;">
-                Selected Works
+                Projects
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard">
-                    <div
-                        class="bg-neo-black border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
-                        <img src="assets/images/wedding-portfolio.png"
-                            alt="Wedding Portfolio - Wedding services showcase by Pandurang Lad"
-                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.parentElement.innerHTML='<span class=\'text-white font-mono text-sm\'>Wedding Portfolio</span>'">
-                    </div>
+                    <a href="https://vidya-weds-pandurang.netlify.app/#/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
+                        <iframe src="https://vidya-weds-pandurang.netlify.app/#/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                    </a>
                     <div class="flex justify-between items-start">
                         <div>
-                            <h3
-                                class="text-4xl font-black uppercase mb-2 group-hover:text-neo-red transition-colors glitch-hover">
-                                Wedding Portfolio</h3>
-                            <p class="font-mono text-sm mb-4 max-w-xs">Platform to showcase wedding services and details. Built with Angular and .NET Core API.</p>
+                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-red transition-colors glitch-hover">Vidya Weds Pandurang</h3>
+                            <p class="font-mono text-sm mb-4 max-w-xs">Elegant wedding portfolio showcasing event details, gallery, and RSVP. Beautiful invitation experience on web.</p>
                             <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
                                 <span class="bg-neo-black text-white px-2 py-1">Angular</span>
-                                <span class="bg-neo-black text-white px-2 py-1">.NET Core API</span>
-                                <span class="bg-neo-black text-white px-2 py-1">SQL Server</span>
+                                <span class="bg-neo-black text-white px-2 py-1">Netlify</span>
+                                <span class="bg-neo-black text-white px-2 py-1">TypeScript</span>
                             </div>
                         </div>
-                        <a href="#"
+                        <a href="https://vidya-weds-pandurang.netlify.app/#/" target="_blank" rel="noopener noreferrer"
                             class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
                             <i class="ri-arrow-right-up-line text-2xl"></i>
                         </a>
@@ -763,18 +910,36 @@
                 </article>
 
                 <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard mt-0 md:mt-20">
-                    <div
-                        class="bg-neo-black border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
-                        <img src="assets/images/jjc-trust.png"
-                            alt="JJC Kalanagari Trust - Donation platform by Pandurang Lad"
-                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.parentElement.innerHTML='<span class=\'text-white font-mono text-sm\'>JJC Kalanagari Trust</span>'">
-                    </div>
+                    <a href="https://www.eotoindia.org/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
+                        <iframe src="https://www.eotoindia.org/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                    </a>
                     <div class="flex justify-between items-start">
                         <div>
-                            <h3
-                                class="text-4xl font-black uppercase mb-2 group-hover:text-neo-blue transition-colors glitch-hover">
-                                JJC Kalanagari Trust</h3>
-                            <p class="font-mono text-sm mb-4 max-w-xs">Web application with integrated payment solutions for donations. PhonePe Business integration.</p>
+                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-pink transition-colors glitch-hover">EOTO India Foundation</h3>
+                            <p class="font-mono text-sm mb-4 max-w-xs">Charitable foundation platform for donations and events. CC Avenue payment gateway integration. Serving 10,000+ children since 1983.</p>
+                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                                <span class="bg-neo-black text-white px-2 py-1">.NET MVC</span>
+                                <span class="bg-neo-black text-white px-2 py-1">SQL Server</span>
+                                <span class="bg-neo-black text-white px-2 py-1">CC Avenue</span>
+                            </div>
+                        </div>
+                        <a href="https://www.eotoindia.org/" target="_blank" rel="noopener noreferrer"
+                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                            <i class="ri-arrow-right-up-line text-2xl"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard">
+                    <a href="https://jjckalanagari.com/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
+                        <iframe src="https://jjckalanagari.com/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                    </a>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-blue transition-colors glitch-hover">JJC Kalanagari</h3>
+                            <p class="font-mono text-sm mb-4 max-w-xs">Yuva Mela registration and event platform. Payment integration, QR check-in, profile management. Jain community engagement.</p>
                             <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
                                 <span class="bg-neo-black text-white px-2 py-1">Angular</span>
                                 <span class="bg-neo-black text-white px-2 py-1">.NET Core API</span>
@@ -782,33 +947,7 @@
                                 <span class="bg-neo-black text-white px-2 py-1">PhonePe</span>
                             </div>
                         </div>
-                        <a href="#"
-                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
-                            <i class="ri-arrow-right-up-line text-2xl"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard">
-                    <div
-                        class="bg-neo-black border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
-                        <img src="assets/images/eoto-foundation.png"
-                            alt="EOTO Charitable Foundation - Donation and events platform by Pandurang Lad"
-                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.parentElement.innerHTML='<span class=\'text-white font-mono text-sm\'>EOTO Foundation</span>'">
-                    </div>
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3
-                                class="text-4xl font-black uppercase mb-2 group-hover:text-neo-pink transition-colors glitch-hover">
-                                EOTO Charitable Foundation</h3>
-                            <p class="font-mono text-sm mb-4 max-w-xs">Platform for managing donations and events. CC Avenue payment gateway integration.</p>
-                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
-                                <span class="bg-neo-black text-white px-2 py-1">.NET MVC</span>
-                                <span class="bg-neo-black text-white px-2 py-1">SQL Server</span>
-                                <span class="bg-neo-black text-white px-2 py-1">CC Avenue</span>
-                            </div>
-                        </div>
-                        <a href="#"
+                        <a href="https://jjckalanagari.com/" target="_blank" rel="noopener noreferrer"
                             class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
                             <i class="ri-arrow-right-up-line text-2xl"></i>
                         </a>
@@ -816,25 +955,43 @@
                 </article>
 
                 <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard mt-0 md:mt-20">
-                    <div
-                        class="bg-neo-black border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
-                        <img src="assets/images/aarav-infosys.png"
-                            alt="Aarav Infosys - Dynamic website by Pandurang Lad"
-                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.parentElement.innerHTML='<span class=\'text-white font-mono text-sm\'>Aarav Infosys</span>'">
-                    </div>
+                    <a href="https://mybizmyqr.com/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
+                        <iframe src="https://mybizmyqr.com/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                    </a>
                     <div class="flex justify-between items-start">
                         <div>
-                            <h3
-                                class="text-4xl font-black uppercase mb-2 group-hover:text-neo-orange transition-colors glitch-hover">
-                                Aarav Infosys</h3>
-                            <p class="font-mono text-sm mb-4 max-w-xs">Dynamic website to enhance user engagement and information access.</p>
+                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-purple transition-colors glitch-hover">MyBizMyQR</h3>
+                            <p class="font-mono text-sm mb-4 max-w-xs">Dynamic QR codes for businesses. Analytics dashboard, custom branding, real-time tracking. Connect physical and digital presence.</p>
                             <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
-                                <span class="bg-neo-black text-white px-2 py-1">Angular</span>
-                                <span class="bg-neo-black text-white px-2 py-1">.NET Core API</span>
-                                <span class="bg-neo-black text-white px-2 py-1">SQL Server</span>
+                                <span class="bg-neo-black text-white px-2 py-1">React</span>
+                                <span class="bg-neo-black text-white px-2 py-1">Node.js</span>
+                                <span class="bg-neo-black text-white px-2 py-1">MongoDB</span>
                             </div>
                         </div>
-                        <a href="#"
+                        <a href="https://mybizmyqr.com/" target="_blank" rel="noopener noreferrer"
+                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                            <i class="ri-arrow-right-up-line text-2xl"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard mt-0 md:mt-20">
+                    <a href="https://kokanswad.com/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
+                        <iframe src="https://kokanswad.com/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                    </a>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-green transition-colors glitch-hover">KokanSwad</h3>
+                            <p class="font-mono text-sm mb-4 max-w-xs">E-commerce for fresh Konkan products—Awla, Kokam, Mangoes. Doorstep delivery, 24x7 support, authentic regional produce.</p>
+                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                                <span class="bg-neo-black text-white px-2 py-1">WordPress</span>
+                                <span class="bg-neo-black text-white px-2 py-1">WooCommerce</span>
+                                <span class="bg-neo-black text-white px-2 py-1">PHP</span>
+                            </div>
+                        </div>
+                        <a href="https://kokanswad.com/" target="_blank" rel="noopener noreferrer"
                             class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
                             <i class="ri-arrow-right-up-line text-2xl"></i>
                         </a>
@@ -842,240 +999,49 @@
                 </article>
 
                 <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard">
-                    <div
-                        class="bg-neo-black border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
-                        <img src="assets/images/hobyhub.png"
-                            alt="HobyHub - Community platform for hobby enthusiasts by Pandurang Lad"
-                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.parentElement.innerHTML='<span class=\'text-white font-mono text-sm\'>HobyHub</span>'">
-                    </div>
+                    <a href="https://snvsamaj.in/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
+                        <iframe src="https://snvsamaj.in/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                    </a>
                     <div class="flex justify-between items-start">
                         <div>
-                            <h3
-                                class="text-4xl font-black uppercase mb-2 group-hover:text-neo-purple transition-colors glitch-hover">
-                                HobyHub</h3>
-                            <p class="font-mono text-sm mb-4 max-w-xs">Community platform for hobby enthusiasts. Built with .NET MVC and SQL Server.</p>
+                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-blue transition-colors glitch-hover">SNV Samaj</h3>
+                            <p class="font-mono text-sm mb-4 max-w-xs">Community organization website for events, membership, and social initiatives.</p>
                             <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
                                 <span class="bg-neo-black text-white px-2 py-1">.NET MVC</span>
                                 <span class="bg-neo-black text-white px-2 py-1">SQL Server</span>
                             </div>
                         </div>
-                        <a href="#"
+                        <a href="https://snvsamaj.in/" target="_blank" rel="noopener noreferrer"
                             class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
                             <i class="ri-arrow-right-up-line text-2xl"></i>
                         </a>
                     </div>
                 </article>
-                <!-- End Projects -->
+
+                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard mt-0 md:mt-20">
+                    <a href="https://foodraksha.com/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
+                        <iframe src="https://foodraksha.com/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                    </a>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-orange transition-colors glitch-hover">FoodRaksha</h3>
+                            <p class="font-mono text-sm mb-4 max-w-xs">FSSAI license application, modification, renewal. Product endorsements for organic and vegan certification. Expert compliance support.</p>
+                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                                <span class="bg-neo-black text-white px-2 py-1">.NET MVC</span>
+                                <span class="bg-neo-black text-white px-2 py-1">SQL Server</span>
+                                <span class="bg-neo-black text-white px-2 py-1">FSSAI</span>
+                            </div>
+                        </div>
+                        <a href="https://foodraksha.com/" target="_blank" rel="noopener noreferrer"
+                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                            <i class="ri-arrow-right-up-line text-2xl"></i>
+                        </a>
+                    </div>
+                </article>
             </div>
 
-            <div class="text-center mt-24">
-                <a href="https://github.com/dev-mauli?tab=repositories"
-                    class="inline-block bg-neo-black text-white px-12 py-5 font-bold font-mono text-xl hover:bg-neo-white hover:text-black border-4 border-neo-black transition-all shadow-hard hover:shadow-none cursor-hover">
-                    VIEW ALL REPOS ON GITHUB
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="achievements" class="py-24 bg-neo-black border-t-4 border-neo-black overflow-hidden relative">
-        <div class="max-w-7xl mx-auto px-4">
-            <div
-                class="flex items-center gap-2 mb-16 bg-white/5 border-2 border-white/10 p-4 inline-flex shadow-hard shadow-neo-blue/20">
-                <div class="flex gap-2">
-                    <div class="h-3 w-3 bg-red-500 rounded-full border border-neo-black"></div>
-                    <div class="h-3 w-3 bg-yellow-500 rounded-full border border-neo-black"></div>
-                    <div class="h-3 w-3 bg-green-500 rounded-full border border-neo-black"></div>
-                </div>
-                <h2 class="font-mono text-white text-xl font-bold ml-4 tracking-tighter">NOTABLE_ACHIEVEMENTS.txt</h2>
-                <div class="ml-8 px-2 bg-neo-blue text-black text-[10px] font-black uppercase">RECOGNIZED</div>
-            </div>
-        </div>
-
-        <div class="marquee-container group cursor-hover">
-            <div class="marquee-content flex gap-8 py-12 px-4 select-none">
-                <!-- Original Set -->
-                <div
-                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-green/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-green"></div>
-                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="font-mono text-neo-green text-xs font-bold tracking-widest uppercase">REPORT_001.log
-                        </div>
-                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
-                    </div>
-                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">AWARD BY: Tech
-                        Mahindra • Mar 2025</div>
-                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Pat on the Back Award – Honored for
-                        exceptional contributions and dedication to excellence."</p>
-                    <div class="flex text-neo-green/60 gap-1 text-lg">
-                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                    </div>
-                </div>
-
-                <div
-                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-blue/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-blue"></div>
-                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="font-mono text-neo-blue text-xs font-bold tracking-widest uppercase">REPORT_002.log
-                        </div>
-                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
-                    </div>
-                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">FROM: CEO @ Alpha
-                        Consultancy</div>
-                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Fast, reliable, and actually has good
-                        taste in design. A rare combination."</p>
-                    <div class="flex text-neo-blue/60 gap-1 text-lg">
-                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                    </div>
-                </div>
-
-                <div
-                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-pink/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-pink"></div>
-                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="font-mono text-neo-pink text-xs font-bold tracking-widest uppercase">REPORT_003.log
-                        </div>
-                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
-                    </div>
-                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">AWARD BY: Tech
-                        Mahindra • Jun 2023</div>
-                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Standing Ovation Award – Recognized for outstanding performance and impactful deliverables."</p>
-                    <div class="flex text-neo-pink/60 gap-1 text-lg">
-                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                    </div>
-                </div>
-
-                <div
-                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-purple/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-purple"></div>
-                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="font-mono text-neo-purple text-xs font-bold tracking-widest uppercase">
-                            REPORT_004.log</div>
-                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
-                    </div>
-                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">AWARD BY: Tech
-                        Mahindra • Nov 2022</div>
-                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Pat on the Back Award – Honored for consistent excellence and technical contributions."</p>
-                    <div class="flex text-neo-purple/60 gap-1 text-lg">
-                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                    </div>
-                </div>
-
-                <div
-                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-orange/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-orange"></div>
-                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="font-mono text-neo-orange text-xs font-bold tracking-widest uppercase">
-                            REPORT_005.log</div>
-                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
-                    </div>
-                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">HIGHLIGHT</div>
-                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Led project achieving 80% reduction in claims processing time, significantly enhancing customer satisfaction."</p>
-                    <div class="flex text-neo-orange/60 gap-1 text-lg">
-                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                    </div>
-                </div>
-
-                <!-- Duplicate Set for Loop -->
-                <div
-                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-green/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-green"></div>
-                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="font-mono text-neo-green text-xs font-bold tracking-widest uppercase">REPORT_001.log
-                        </div>
-                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
-                    </div>
-                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">FROM: Student @ L J
-                        University</div>
-                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Developed training program resulting in 40% decrease in onboarding time for new team members."</p>
-                    <div class="flex text-neo-green/60 gap-1 text-lg">
-                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                    </div>
-                </div>
-
-                <div
-                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-blue/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-blue"></div>
-                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="font-mono text-neo-blue text-xs font-bold tracking-widest uppercase">REPORT_002.log
-                        </div>
-                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
-                    </div>
-                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">FROM: CEO @ Alpha
-                        Consultancy</div>
-                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Fast, reliable, and actually has good
-                        taste in design. A rare combination."</p>
-                    <div class="flex text-neo-blue/60 gap-1 text-lg">
-                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                    </div>
-                </div>
-
-                <div
-                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-pink/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-pink"></div>
-                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="font-mono text-neo-pink text-xs font-bold tracking-widest uppercase">REPORT_003.log
-                        </div>
-                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
-                    </div>
-                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">AWARD BY: Tech
-                        Mahindra • Jun 2023</div>
-                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Standing Ovation Award – Recognized for outstanding performance and impactful deliverables."</p>
-                    <div class="flex text-neo-pink/60 gap-1 text-lg">
-                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                    </div>
-                </div>
-
-                <div
-                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-purple/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-purple"></div>
-                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="font-mono text-neo-purple text-xs font-bold tracking-widest uppercase">
-                            REPORT_004.log</div>
-                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
-                    </div>
-                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">FROM: Dev @
-                        CreativeChaos</div>
-                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Implementation of performance optimization strategies increased application speed by 60%."</p>
-                    <div class="flex text-neo-purple/60 gap-1 text-lg">
-                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                    </div>
-                </div>
-
-                <div
-                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-orange/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-orange"></div>
-                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="font-mono text-neo-orange text-xs font-bold tracking-widest uppercase">
-                            REPORT_005.log</div>
-                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
-                    </div>
-                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">HIGHLIGHT</div>
-                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Led project achieving 80% reduction in claims processing time, significantly enhancing customer satisfaction."</p>
-                    <div class="flex text-neo-orange/60 gap-1 text-lg">
-                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1275,6 +1241,87 @@
 
         // Call on page load
         fetchGitHubStats();
+
+        // WakaTime JSON-driven visualization - unique terminal-style display
+        function renderWakaTimeViz(data) {
+            const container = document.getElementById('wakatime-viz');
+            if (!container || !data || !Array.isArray(data)) return;
+            const items = data.filter(d => d && d.grand_total && d.range);
+            if (items.length === 0) {
+                container.innerHTML = '<div class="text-center text-white/50 font-mono text-sm py-8">No data yet</div>';
+                return;
+            }
+            const maxSeconds = Math.max(...items.map(d => d.grand_total.total_seconds || 0), 1);
+            const last14 = items.slice(-14).reverse();
+            const totalLast7 = last14.slice(0, 7).reduce((s, d) => s + (d.grand_total.total_seconds || 0), 0);
+            const totalLast14 = last14.reduce((s, d) => s + (d.grand_total.total_seconds || 0), 0);
+            const fmtHrs = (sec) => {
+                const h = Math.floor(sec / 3600);
+                const m = Math.floor((sec % 3600) / 60);
+                return h > 0 ? (m > 0 ? `${h}h ${m}m` : `${h}h`) : `${m}m`;
+            };
+            container.innerHTML = `
+                <div class="flex flex-col lg:flex-row gap-6">
+                    <div class="flex flex-row lg:flex-col gap-3 shrink-0">
+                        <div class="flex-1 bg-neo-blue/20 border-2 border-neo-blue p-4 flex flex-col justify-center items-center min-w-[120px]">
+                            <span class="font-mono text-[9px] text-neo-blue/80 uppercase">last 7d</span>
+                            <span class="text-2xl font-black text-neo-blue tabular-nums">${fmtHrs(totalLast7)}</span>
+                        </div>
+                        <div class="flex-1 bg-neo-black border-2 border-neo-blue/50 p-4 flex flex-col justify-center items-center min-w-[120px]">
+                            <span class="font-mono text-[8px] text-neo-blue/70 uppercase">last 14d</span>
+                            <span class="text-xl font-black text-white tabular-nums">${fmtHrs(totalLast14)}</span>
+                        </div>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="font-mono text-[9px] text-neo-blue/70 uppercase mb-3">› daily_bars</div>
+                        <div class="space-y-1.5">
+                            ${last14.map(d => {
+                                const sec = d.grand_total.total_seconds || 0;
+                                const pct = maxSeconds > 0 ? (sec / maxSeconds) * 100 : 0;
+                                const barW = Math.max(pct, sec > 0 ? 5 : 0);
+                                return `<div class="flex items-center gap-2 group">
+                                    <span class="font-mono text-[10px] text-white/70 w-16 shrink-0">${(d.range.date || '').slice(5)}</span>
+                                    <div class="flex-1 h-4 bg-white/10 rounded overflow-hidden">
+                                        <div class="h-full rounded bg-neo-blue transition-all duration-500 group-hover:bg-neo-blue/90" style="width:${barW}%;" title="${d.grand_total.text || '0'}"></div>
+                                    </div>
+                                    <span class="font-mono text-[10px] text-neo-blue w-16 text-right tabular-nums">${d.grand_total.text || '0'}</span>
+                                </div>`;
+                            }).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        function fetchWakaTimeStats() {
+            const WAKATIME_JSON = 'https://wakatime.com/share/@dev_mauli/fb7f6396-f048-4c2f-97b1-56a2adfe3bc8.json';
+            const container = document.getElementById('wakatime-viz');
+            function showData(res) {
+                const data = (res && Array.isArray(res)) ? res : (res && res.data && Array.isArray(res.data) ? res.data : null);
+                if (data && data.length > 0) renderWakaTimeViz(data);
+                else showError();
+            }
+            function showError() {
+                if (container) container.innerHTML = '<div class="flex justify-center items-center py-4"><img src="https://wakatime.com/share/@dev_mauli/bf4fd544-3d53-49bb-847a-9de2762bdcb0.svg" alt="WakaTime coding stats" class="w-full max-w-2xl h-auto opacity-90"></div>';
+            }
+            fetch(WAKATIME_JSON).then(r => r.json()).then(showData).catch(function() {
+                const cb = 'wakatimeCb_' + Date.now();
+                window[cb] = function(res) {
+                    delete window[cb];
+                    document.getElementById('script-wakatime')?.remove();
+                    showData(res);
+                };
+                const script = document.createElement('script');
+                script.id = 'script-wakatime';
+                script.src = WAKATIME_JSON + '?callback=' + cb;
+                script.onerror = function() {
+                    document.getElementById('script-wakatime')?.remove();
+                    delete window[cb];
+                    showError();
+                };
+                document.body.appendChild(script);
+            });
+        }
+        fetchWakaTimeStats();
 
         // Live Memory Usage (Chrome: actual JS heap | Fallback: simulated live value)
         function initMemoryUsage() {

@@ -42,7 +42,7 @@
     <title>Pandurang Lad | Full Stack Software Engineer</title>
 
     <!-- Theme & Performance -->
-    <meta name="theme-color" content="#121212">
+    <meta name="theme-color" content="#0F172A">
     <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Space+Grotesk:wght@800&display=swap"
         as="style">
@@ -56,7 +56,7 @@
       "url": "https://panduranglad.dev/",
       "jobTitle": "Senior Full Stack Software Engineer",
       "image": "https://panduranglad.dev/assets/images/logo.png",
-      "knowsAbout": [".NET Core", "Angular", "SQL Server", "Web API", "Agile", "Cloud Computing", "Microservices", "Banking", "Finance", "Insurance"],
+      "knowsAbout": [".NET Core", "Angular", "SQL Server", "Web API", "Node.js", "Agile", "Azure", "Microservices", "React Native", "Generative AI", "DSA", "Banking", "Finance", "Insurance"],
       "sameAs": [
         "https://github.com/dev-mauli",
         "https://www.linkedin.com/in/pandurang-lad/"
@@ -81,25 +81,25 @@
             theme: {
                 extend: {
                     colors: {
-                        'neo-yellow': '#FBFF48',
-                        'neo-pink': '#FF70A6',
-                        'neo-blue': '#3B82F6',
-                        'neo-green': '#33FF57',
-                        'neo-purple': '#A855F7',
-                        'neo-orange': '#FF9F1C',
-                        'neo-red': '#FF2A2A',
-                        'neo-white': '#FFFDF5',
-                        'neo-black': '#121212',
+                        'neo-yellow': '#FBBF24',
+                        'neo-pink': '#EC4899',
+                        'neo-blue': '#06B6D4',
+                        'neo-green': '#10B981',
+                        'neo-purple': '#8B5CF6',
+                        'neo-orange': '#F97316',
+                        'neo-red': '#F43F5E',
+                        'neo-white': '#FFFBEB',
+                        'neo-black': '#0F172A',
                     },
                     fontFamily: {
                         'display': ['"Space Grotesk"', 'sans-serif'],
                         'mono': ['"JetBrains Mono"', 'monospace'],
                     },
                     boxShadow: {
-                        'hard': '4px 4px 0px 0px #000',
-                        'hard-sm': '2px 2px 0px 0px #000',
-                        'hard-lg': '8px 8px 0px 0px #000',
-                        'hard-xl': '12px 12px 0px 0px #000',
+                        'hard': '4px 4px 0px 0px #0F172A',
+                        'hard-sm': '2px 2px 0px 0px #0F172A',
+                        'hard-lg': '8px 8px 0px 0px #0F172A',
+                        'hard-xl': '12px 12px 0px 0px #0F172A',
                     }
                 }
             }
@@ -111,11 +111,11 @@
         body {
             cursor: none;
             /* We use a custom cursor */
-            background-color: #FFFDF5;
+            background-color: #FFFBEB;
             background-image:
-                radial-gradient(#000 1px, transparent 1px),
-                linear-gradient(to right, #e5e5e5 1px, transparent 1px),
-                linear-gradient(to bottom, #e5e5e5 1px, transparent 1px);
+                radial-gradient(#0F172A 1px, transparent 1px),
+                linear-gradient(to right, #E2E8F0 1px, transparent 1px),
+                linear-gradient(to bottom, #E2E8F0 1px, transparent 1px);
             background-size: 40px 40px, 100px 100px, 100px 100px;
         }
 
@@ -135,8 +135,14 @@
 
         .marquee-content {
             display: flex;
-            animation: scroll 40s linear infinite;
+            animation: scroll 30s linear infinite;
             width: max-content;
+        }
+
+        .marquee-item {
+            flex-shrink: 0;
+            white-space: nowrap;
+            padding-right: 2rem;
         }
 
         .marquee-container:hover .marquee-content {
@@ -183,7 +189,7 @@
         /* Glitch Effect on Hover */
         .glitch-hover:hover {
             animation: glitch-anim 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
-            color: #FF2A2A;
+            color: #F43F5E;
         }
 
         @keyframes glitch-anim {
@@ -220,111 +226,121 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <div id="cursor" class="w-6 h-6 bg-white rounded-full border-2 border-black hidden lg:block"></div>
+    <div id="cursor" class="w-6 h-6 bg-white rounded-full border-2 border-neo-black hidden lg:block"></div>
 
-    <div class="fixed top-0 left-0 h-2 bg-neo-green z-[60] border-b-2 border-black" id="progressBar" style="width: 0%">
+    <div class="fixed top-0 left-0 h-2 bg-neo-blue z-[60] border-b-2 border-neo-black" id="progressBar" style="width: 0%">
     </div>
 
     <nav class="fixed top-0 w-full z-50 px-4 py-4 pointer-events-none">
         <div class="max-w-7xl mx-auto flex justify-between items-center pointer-events-auto">
             <a href="#"
-                class="bg-neo-white border-2 border-black px-4 py-1 text-2xl font-black shadow-hard hover:bg-neo-yellow transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none cursor-hover">
+                class="bg-neo-white border-2 border-neo-black px-4 py-1 text-2xl font-black shadow-hard hover:bg-neo-yellow transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none cursor-hover">
                 PANDURANG.exe
             </a>
 
-            <div class="hidden md:flex gap-4 bg-white border-2 border-black p-2 shadow-hard">
+            <div class="hidden md:flex gap-4 bg-white border-2 border-neo-black p-2 shadow-hard">
                 <a href="#about"
-                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover">/ABOUT</a>
+                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-neo-black hover:text-white transition-colors cursor-hover">/ABOUT</a>
                 <a href="#skills"
-                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover">/SKILLS</a>
+                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-neo-black hover:text-white transition-colors cursor-hover">/SKILLS</a>
                 <a href="#experience"
-                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover">/LOGS</a>
+                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-neo-black hover:text-white transition-colors cursor-hover">/LOGS</a>
                 <a href="#projects"
-                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover">/WORK</a>
+                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-neo-black hover:text-white transition-colors cursor-hover">/WORK</a>
                 <a href="#contact"
-                    class="px-3 py-1 font-mono font-bold text-sm bg-neo-yellow border border-black hover:bg-neo-pink transition-colors cursor-hover">HIRE
+                    class="px-3 py-1 font-mono font-bold text-sm bg-neo-yellow border border-neo-black hover:bg-neo-pink transition-colors cursor-hover">HIRE
                     ME</a>
             </div>
         </div>
     </nav>
 
     <section
-        class="min-h-screen flex flex-col justify-center items-center px-4 pt-20 relative overflow-hidden border-b-4 border-black">
+        class="min-h-screen flex flex-col justify-center items-center px-4 pt-20 relative overflow-hidden border-b-4 border-neo-black">
         <div
-            class="absolute top-1/3 left-[10%] w-16 h-16 bg-neo-blue border-4 border-black shadow-hard animate-bounce hidden lg:block rotate-12">
+            class="absolute top-1/3 left-[10%] w-16 h-16 bg-neo-blue border-4 border-neo-black shadow-hard animate-bounce hidden lg:block rotate-12">
         </div>
         <div
-            class="absolute bottom-1/3 right-[10%] w-24 h-24 bg-neo-pink rounded-full border-4 border-black shadow-hard hidden lg:block animate-pulse">
+            class="absolute bottom-1/3 right-[10%] w-24 h-24 bg-neo-pink rounded-full border-4 border-neo-black shadow-hard hidden lg:block animate-pulse">
         </div>
         <div class="absolute top-20 right-20 text-9xl opacity-5 font-black select-none pointer-events-none">CODE</div>
 
-        <div class="relative z-10 text-center max-w-5xl">
+        <div class="relative z-10 text-center max-w-5xl w-full mx-auto">
             <div
-                class="inline-block bg-neo-white border-2 border-black px-4 py-1 mb-6 shadow-hard rotate-[-2deg] reveal">
-                <span class="font-mono font-bold text-neo-green bg-black px-2 mr-2">●</span>
+                class="inline-block bg-neo-white border-2 border-neo-black px-4 py-1 mb-6 shadow-hard rotate-[-2deg] reveal">
+                <span class="font-mono font-bold text-neo-green bg-neo-black px-2 mr-2">●</span>
                 <span class="font-mono font-bold">SYSTEM STATUS: ONLINE</span>
             </div>
 
             <h1
-                class="text-[13vw] md:text-[10vw] leading-[0.8] font-black uppercase tracking-tighter mb-6 reveal mix-blend-darken">
-                FULL STACK<br>
-                <span class="text-white text-stroke-black" style="-webkit-text-stroke: 3px black;">SOFTWARE ENGINEER</span>
+                class="text-[13vw] md:text-[10vw] leading-[0.8] font-black uppercase tracking-tighter mb-6 reveal mix-blend-darken w-full text-center">
+                <span class="block text-center">FULL STACK</span>
+                <span class="block text-center text-white text-stroke-black" style="-webkit-text-stroke: 3px #0F172A;">SOFTWARE ENGINEER</span>
             </h1>
 
             <p
-                class="font-mono text-lg md:text-2xl max-w-2xl mx-auto mb-10 bg-neo-yellow border-2 border-black p-4 shadow-hard reveal rotate-1">
-                7+ years building scalable applications in banking, finance & insurance. <br>
-                <b>.NET Core • Angular • SQL Server</b>
+                class="font-mono text-lg md:text-2xl max-w-2xl mx-auto mb-10 bg-neo-yellow border-2 border-neo-black p-4 shadow-hard reveal rotate-1">
+                8+ years building scalable applications in banking, finance & insurance. <br>
+                <b>.NET Core • Angular • SQL Server • Generative AI</b>
             </p>
 
-            <div class="flex flex-col md:flex-row justify-center gap-6 reveal">
+            <div class="flex flex-col md:flex-row justify-center gap-6 reveal mb-16">
                 <a href="#projects"
-                    class="bg-black text-white border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-green hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover">
-                    VIEW DATABASE
+                    class="bg-neo-black text-white border-2 border-neo-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-green hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover">
+                    VIEW PROJECTS
                 </a>
                 <a href="assets/Resume/Pandurang Lad Resume.pdf" download
-                    class="bg-neo-white text-black border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-pink hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover flex items-center justify-center gap-2">
+                    class="bg-neo-white text-black border-2 border-neo-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-pink hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover flex items-center justify-center gap-2">
                     <i class="ri-download-line"></i> DOWNLOAD CV
                 </a>
             </div>
         </div>
     </section>
 
-    <div class="border-b-4 border-black bg-neo-blue py-3 relative z-20">
+    <div class="border-b-4 border-neo-black bg-neo-blue py-3 relative z-20 -mt-px">
         <div class="marquee-container font-mono font-bold text-2xl text-white">
             <div class="marquee-content">
-                /// BANKING & FINANCE /// .NET CORE /// ANGULAR /// SQL SERVER /// AGILE /// CLOUD COMPUTING /// MICROSERVICES /// API DEVELOPMENT /// OPEN FOR OPPORTUNITIES ///
+                <span class="marquee-item">/// GENERATIVE AI /// BANKING & FINANCE /// .NET CORE /// ANGULAR /// SQL SERVER /// AGILE /// MICROSERVICES /// API DEVELOPMENT /// OPEN FOR OPPORTUNITIES</span>
+                <span class="marquee-item">/// GENERATIVE AI /// BANKING & FINANCE /// .NET CORE /// ANGULAR /// SQL SERVER /// AGILE /// MICROSERVICES /// API DEVELOPMENT /// OPEN FOR OPPORTUNITIES ///</span>
             </div>
         </div>
     </div>
 
-    <section id="about" class="py-24 px-4 max-w-7xl mx-auto border-x-4 border-black bg-white my-12 shadow-hard-lg">
+    <section id="about" class="py-24 px-4 max-w-7xl mx-auto border-x-4 border-neo-black bg-white my-12 shadow-hard-lg">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
             <div class="md:col-span-4 reveal">
-                <div class="aspect-square bg-gray-200 border-4 border-black relative shadow-hard overflow-hidden group">
-                    <img src="assets/images/profile.jpg" alt="Pandurang Lad"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#e5e5e5,#d4d4d4)'">
+                <div class="aspect-square bg-gray-200 border-4 border-neo-black relative shadow-hard overflow-hidden group">
+                    <img src="assets/images/profile.png" alt="Pandurang Lad"
+                        class="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#e5e5e5,#d4d4d4)'">
                     <span
-                        class="absolute top-2 left-2 bg-neo-red text-white px-2 font-mono text-xs border border-black z-10">AVATAR.JPG</span>
+                        class="absolute top-2 left-2 bg-neo-red text-white px-2 font-mono text-xs border border-neo-black z-10">PANDURANG.SYS</span>
                 </div>
             </div>
             <div class="md:col-span-8 flex flex-col justify-center reveal">
                 <h2 class="text-6xl font-black uppercase mb-6">Who am I?</h2>
                 <p class="font-mono text-xl leading-relaxed mb-6">
-                    I am Pandurang Lad. A <span class="bg-neo-yellow px-1 border border-black">Senior Full Stack Software Engineer</span> with 7+ years of expertise in banking, finance, and insurance domains.
+                    I am Pandurang Lad. A <span class="bg-neo-yellow px-1 border border-neo-black">Senior Full Stack Software Engineer</span> with 8+ years of extensive experience in software development, particularly in banking, finance, and insurance sectors.
                 </p>
+                <p class="font-mono text-base leading-relaxed mb-6 text-gray-700">
+                    Senior Software Engineer at Tech Mahindra, leading the development of sophisticated applications to enhance operational efficiency and improve user experience across financial services. Proficient in .NET Core, Angular, and SQL Server, with expertise in Agile development practices and cross-functional collaboration for seamless project execution.
+                </p>
+                <p class="font-mono text-base leading-relaxed mb-6 text-gray-700">
+                    Recognized for contributions in policy management and claims processing—optimizing workflow efficiency. Expert in integrating advanced technologies such as Google Maps for geolocation in agricultural insurance solutions.
+                </p>
+
                 <p class="font-mono text-lg mb-8 text-gray-600 border-l-4 border-neo-purple pl-4">
-                    > Specialized in .NET Core, Angular & SQL Server.<br>
-                    > Led projects improving application performance by 60%.<br>
-                    > 80% reduction in claims processing time at Tech Mahindra.<br>
-                    > Pat on the Back Award, IBM WatsonX Challenge 1st Prize.
+                    <span class="font-bold text-neo-black">Highlights:</span><br>
+                    > Led project achieving 80% reduction in claims processing time, enhancing customer satisfaction.<br>
+                    > Implemented performance optimizations that increased application speed by 60%.<br>
+                    > Developed training program resulting in 40% decrease in onboarding time.<br>
+                    > Integrated Google Maps for geolocation in agricultural insurance solutions.<br>
+                    > Designing and deploying scalable cloud applications for the evolving digital landscape.
                 </p>
 
                 <div class="flex gap-4 flex-wrap">
                     <div class="bg-neo-black text-white px-4 py-2 font-mono text-sm border-2 border-transparent">
-                        📍 Nallasopara East, Mumbai
+                        📍 Mumbai, Maharashtra, India
                     </div>
-                    <div class="bg-neo-green text-black px-4 py-2 font-mono text-sm border-2 border-black">
+                    <div class="bg-neo-green text-black px-4 py-2 font-mono text-sm border-2 border-neo-black">
                         🟢 STATUS: AVAILABLE
                     </div>
                 </div>
@@ -332,9 +348,9 @@
         </div>
     </section>
 
-    <section id="skills" class="py-20 bg-neo-black text-neo-white border-y-4 border-black relative overflow-hidden">
+    <section id="skills" class="py-20 bg-neo-black text-neo-white border-y-4 border-neo-black relative overflow-hidden">
         <div class="absolute inset-0 opacity-20"
-            style="background-image: linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px); background-size: 40px 40px;">
+            style="background-image: linear-gradient(rgba(6,182,212,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(6,182,212,0.3) 1px, transparent 1px); background-size: 40px 40px;">
         </div>
 
         <div class="max-w-[1400px] mx-auto px-4 relative z-10">
@@ -400,6 +416,12 @@
 
                 <div
                     class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ BACKEND</div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">NODE.JS</div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
                     <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ METHODOLOGY</div>
                     <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">AGILE</div>
                 </div>
@@ -413,7 +435,25 @@
                 <div
                     class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
                     <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ CLOUD</div>
-                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">CLOUD COMPUTING</div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">AZURE</div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ FRAMEWORK</div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">REACT NATIVE</div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-purple transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ AI</div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">GENERATIVE AI</div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ CORE</div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">DSA</div>
                 </div>
 
                 <div
@@ -424,8 +464,8 @@
             </div>
 
             <div class="border-t-4 border-white mt-8 pt-4 flex justify-between font-mono text-xs text-gray-500">
-                <span>TOTAL_NODES: 12</span>
-                <span>MEMORY_USAGE: 128MB</span>
+                <span>TOTAL_NODES: 16</span>
+                <span>MEMORY_USAGE: <span id="memory-usage" data-memory-usage>--MB</span></span>
             </div>
         </div>
     </section>
@@ -435,59 +475,63 @@
             Experience<span class="text-neo-red">_Log</span>
         </h2>
 
-        <div class="relative border-l-4 border-black ml-4 md:ml-10 space-y-12">
+        <div class="relative border-l-4 border-neo-black ml-4 md:ml-10 space-y-12">
+            <!-- Tech Mahindra -->
             <div class="reveal relative pl-8 md:pl-16">
-                <div class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-yellow border-4 border-black"></div>
-                <div class="bg-white border-4 border-black p-6 shadow-hard hover:shadow-hard-xl transition-all">
-                    <div
-                        class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
+                <div class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-yellow border-4 border-neo-black"></div>
+                <div class="bg-white border-4 border-neo-black p-6 shadow-hard hover:shadow-hard-xl transition-all">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
                         <h3 class="text-3xl font-black uppercase">Senior Software Engineer</h3>
-                        <span class="font-mono font-bold bg-neo-black text-white px-2 py-1">April 2022 – Present</span>
+                        <span id="exp-techmahindra" class="font-mono font-bold bg-neo-black text-white px-2 py-1" data-start="2022-04" data-end="present">April 2022 – Present</span>
                     </div>
-                    <p class="font-mono text-xl mb-2 text-neo-yellow font-bold">@ Tech Mahindra</p>
-                    <p class="font-mono text-sm mb-3 text-gray-500">Domain: Agri-Insurance, Finance, ERP</p>
-                    <ul class="list-disc list-inside font-mono text-gray-700 space-y-1">
-                        <li>Led design and development of applications with comprehensive reporting forms, policy management, claims processing, and re-insurance modules</li>
-                        <li>Supervised a team of developers, overseeing maintenance and code review for adherence to coding standards</li>
-                        <li>Developed and integrated Google Maps feature for agricultural field identification in insurance</li>
-                        <li>Created advanced insurance service using data factors to identify natural calamities and streamline claims process</li>
+                    <a href="https://www.techmahindra.com/" target="_blank" rel="noopener noreferrer" class="font-mono text-xl mb-3 text-neo-yellow font-bold block hover:underline cursor-hover">@ Tech Mahindra</a>
+                    <p class="font-mono text-sm mb-4 text-gray-600">Domain: Agri-Insurance, Finance, ERP</p>
+                    <p class="font-mono text-gray-700 mb-4 leading-relaxed">Leading design and development of applications that streamline operations in agri-insurance and finance domains. Supervising a team of developers, ensuring adherence to coding standards and fostering a culture of quality. Developing innovative features including Google Maps integration for precise land identification, and creating advanced insurance services that enhance customer satisfaction through efficient claims processing.</p>
+                    <p class="font-mono text-sm font-bold text-neo-black mb-2">Achievements:</p>
+                    <ul class="list-disc list-inside font-mono text-gray-700 space-y-1 mb-4">
+                        <li>Led project achieving 80% reduction in claims processing time, significantly improving customer satisfaction</li>
+                        <li>Developed comprehensive training program reducing onboarding time by 40% and enhancing project integration</li>
+                        <li>Implemented performance optimization strategies increasing application speed by 60%, enhancing user experience</li>
                     </ul>
                 </div>
             </div>
 
+            <!-- Bombay Stock Exchange -->
             <div class="reveal relative pl-8 md:pl-16">
-                <div class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-red border-4 border-black"></div>
-                <div class="bg-white border-4 border-black p-6 shadow-hard hover:shadow-hard-xl transition-all">
-                    <div
-                        class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
-                        <h3 class="text-3xl font-black uppercase">IT Officer</h3>
-                        <span class="font-mono font-bold bg-neo-black text-white px-2 py-1">March 2020 – March 2022</span>
+                <div class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-red border-4 border-neo-black"></div>
+                <div class="bg-white border-4 border-neo-black p-6 shadow-hard hover:shadow-hard-xl transition-all">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
+                        <h3 class="text-3xl font-black uppercase">Information Technology Officer</h3>
+                        <span class="font-mono font-bold bg-neo-black text-white px-2 py-1">March 2020 – April 2022 · 2 yrs 2 mos</span>
                     </div>
-                    <p class="font-mono text-xl mb-2 text-neo-red font-bold">@ BSE Tech Infra Services</p>
-                    <p class="font-mono text-sm mb-3 text-gray-500">Domain: Trading, Stock Market, Finance, ERP</p>
+                    <a href="https://www.bseindia.com/" target="_blank" rel="noopener noreferrer" class="font-mono text-xl mb-3 text-neo-red font-bold block hover:underline cursor-hover">@ Bombay Stock Exchange Limited</a>
+                    <p class="font-mono text-sm mb-4 text-gray-600">Domain: Trading, Stock Market, Finance</p>
+                    <p class="font-mono text-gray-700 mb-4 leading-relaxed">Played a crucial role in developing applications that comply with BSE and SEBI regulations, ensuring operational integrity. Established secure systems for data exchange with banks via SFTP extranet, and contributed to Token Security System development. Implemented Single Sign-On (SSO) functionality, significantly improving user experience.</p>
+                    <p class="font-mono text-sm font-bold text-neo-black mb-2">Achievements:</p>
                     <ul class="list-disc list-inside font-mono text-gray-700 space-y-1">
-                        <li>Developed applications complying with BSE and SEBI regulatory guidelines</li>
-                        <li>Established secure SFTP system for extranet connection with banks for secure data exchange</li>
-                        <li>Contributed to Token Security System and Single Sign-On (SSO) functionality</li>
+                        <li>Developed applications ensuring regulatory compliance and enhancing operational integrity</li>
+                        <li>Established secure system for data exchange, improving operational efficiency and security</li>
+                        <li>Contributed to advanced security measures protecting sensitive data and user information</li>
                     </ul>
                 </div>
             </div>
 
+            <!-- Nine Square Prints -->
             <div class="reveal relative pl-8 md:pl-16">
-                <div class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-green border-4 border-black"></div>
-                <div class="bg-white border-4 border-black p-6 shadow-hard hover:shadow-hard-xl transition-all">
-                    <div
-                        class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
+                <div class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-green border-4 border-neo-black"></div>
+                <div class="bg-white border-4 border-neo-black p-6 shadow-hard hover:shadow-hard-xl transition-all">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
                         <h3 class="text-3xl font-black uppercase">Software Developer</h3>
-                        <span class="font-mono font-bold bg-neo-black text-white px-2 py-1">May 2018 – February 2020</span>
+                        <span class="font-mono font-bold bg-neo-black text-white px-2 py-1">May 2018 – February 2020 · 1 yr 10 mos</span>
                     </div>
-                    <p class="font-mono text-xl mb-2 text-neo-green font-bold">@ Nine Square Solutions</p>
-                    <p class="font-mono text-sm mb-3 text-gray-500">Domain: Educational, ERP</p>
+                    <a href="https://9squareprints.com/" target="_blank" rel="noopener noreferrer" class="font-mono text-xl mb-3 text-neo-green font-bold block hover:underline cursor-hover">@ Nine Square Solutions</a>
+                    <p class="font-mono text-sm mb-4 text-gray-600">Domain: Educational, ERP</p>
+                    <p class="font-mono text-gray-700 mb-4 leading-relaxed">Contributed to development of key modules for educational ERP system. Integrated biometric attendance systems and developed secure payment solutions. Integrated Azure API for face recognition technology, enhancing application security.</p>
+                    <p class="font-mono text-sm font-bold text-neo-black mb-2">Achievements:</p>
                     <ul class="list-disc list-inside font-mono text-gray-700 space-y-1">
-                        <li>Developed Admission Module and Exam Module for educational ERP system</li>
-                        <li>Integrated biometric attendance systems for improved tracking</li>
-                        <li>Developed Online Checking Module and Payment Gateway Integration</li>
-                        <li>Integrated Azure API for face recognition technology</li>
+                        <li>Developed key modules improving functionality of the educational ERP system</li>
+                        <li>Integrated biometric systems enhancing attendance tracking accuracy</li>
+                        <li>Developed secure payment solutions facilitating efficient financial transactions</li>
                     </ul>
                 </div>
             </div>
@@ -498,12 +542,12 @@
             Education<span class="text-neo-purple">_Log</span>
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div class="bg-white border-4 border-black p-6 shadow-hard">
+            <div class="bg-white border-4 border-neo-black p-6 shadow-hard">
                 <h3 class="text-2xl font-black uppercase mb-2">Master's in Computer Science</h3>
                 <p class="font-mono text-neo-purple font-bold mb-2">University of Mumbai</p>
                 <span class="font-mono text-sm text-gray-600">2018 – 2020</span>
             </div>
-            <div class="bg-white border-4 border-black p-6 shadow-hard">
+            <div class="bg-white border-4 border-neo-black p-6 shadow-hard">
                 <h3 class="text-2xl font-black uppercase mb-2">Bachelor's in Computer Science</h3>
                 <p class="font-mono text-neo-purple font-bold mb-2">University of Mumbai</p>
                 <span class="font-mono text-sm text-gray-600">2015 – 2018</span>
@@ -511,9 +555,9 @@
         </div>
     </section>
     <!-- CODING STATS SECTION -->
-    <section id="coding-stats" class="py-12 bg-neo-black text-white border-y-4 border-black relative overflow-hidden">
+    <section id="coding-stats" class="py-12 bg-neo-black text-white border-y-4 border-neo-black relative overflow-hidden">
         <div class="absolute inset-0 opacity-20"
-            style="background-image: linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px); background-size: 40px 40px;">
+            style="background-image: linear-gradient(rgba(6,182,212,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(6,182,212,0.3) 1px, transparent 1px); background-size: 40px 40px;">
         </div>
 
         <div class="max-w-7xl mx-auto px-4 relative z-10">
@@ -541,7 +585,7 @@
 
                     <!-- GitHub Block -->
                     <div
-                        class="border-4 border-white/20 p-6 bg-black flex-1 flex flex-col shadow-[8px_8px_0_rgba(0,0,0,1)] relative group">
+                        class="border-4 border-white/20 p-6 bg-neo-black flex-1 flex flex-col shadow-[8px_8px_0_rgba(15,23,42,1)] relative group">
                         <!-- Profile Header -->
                         <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
                             <div class="flex items-center gap-3">
@@ -562,14 +606,14 @@
                         <!-- Simplified Stats Grid (2x2) -->
                         <div class="grid grid-cols-2 gap-4 mb-8 uppercase">
                             <div
-                                class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(51,255,87,0.1)]">
+                                class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(16,185,129,0.3)]">
                                 <div
                                     class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">
                                     Repositories</div>
                                 <div id="repos-count" class="text-white font-black text-3xl tracking-tighter">--</div>
                             </div>
                             <div
-                                class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(51,255,87,0.1)]">
+                                class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(16,185,129,0.3)]">
                                 <div
                                     class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">
                                     Followers</div>
@@ -577,7 +621,7 @@
                                 </div>
                             </div>
                             <div
-                                class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(51,255,87,0.1)]">
+                                class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(16,185,129,0.3)]">
                                 <div
                                     class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">
                                     Commits</div>
@@ -585,7 +629,7 @@
                                     class="text-white font-black text-3xl tracking-tighter">--</div>
                             </div>
                             <div
-                                class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(51,255,87,0.1)]">
+                                class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(16,185,129,0.3)]">
                                 <div
                                     class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">
                                     Joined</div>
@@ -597,7 +641,7 @@
                         <!-- Activity Graph parallel to LeetCode Heatmap -->
                         <div class="flex-1 flex flex-col justify-center mb-8">
                             <div
-                                class="bg-black border-2 border-neo-green/30 p-2 overflow-hidden shadow-[4px_4px_0_rgba(51,255,87,0.1)] group hover:border-neo-green transition-colors duration-500 relative">
+                                class="bg-neo-black border-2 border-neo-green/30 p-2 overflow-hidden shadow-[4px_4px_0_rgba(16,185,129,0.3)] group hover:border-neo-green transition-colors duration-500 relative">
                                 <!-- NeoBrutalist accent dot -->
                                 <div class="absolute top-1 right-1 w-1.5 h-1.5 bg-neo-green rounded-full animate-pulse">
                                 </div>
@@ -635,7 +679,7 @@
 
                     <!-- LeetCode Block -->
                     <div
-                        class="border-4 border-white/20 p-6 bg-black flex-1 flex flex-col shadow-[8px_8px_0_rgba(0,0,0,1)] relative group">
+                        class="border-4 border-white/20 p-6 bg-neo-black flex-1 flex flex-col shadow-[8px_8px_0_rgba(15,23,42,1)] relative group">
                         <!-- Profile Header -->
                         <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
                             <div class="flex items-center gap-3">
@@ -655,7 +699,7 @@
                         <!-- Activity Box parallel to GitHub Matrix -->
                         <div class="flex-1 flex flex-col justify-center mb-8">
                             <div
-                                class="border-2 border-neo-orange/30 p-2 overflow-hidden bg-black shadow-[4px_4px_0_rgba(255,107,0,0.1)] group hover:border-neo-orange transition-colors duration-500 relative">
+                                class="border-2 border-neo-orange/30 p-2 overflow-hidden bg-neo-black shadow-[4px_4px_0_rgba(249,115,22,0.3)] group hover:border-neo-orange transition-colors duration-500 relative">
                                 <!-- NeoBrutalist accent dot -->
                                 <div
                                     class="absolute top-1 right-1 w-1.5 h-1.5 bg-neo-orange rounded-full animate-pulse">
@@ -684,17 +728,17 @@
         </div>
     </section>
 
-    <section id="projects" class="py-24 bg-neo-yellow border-t-4 border-black px-4 overflow-hidden">
+    <section id="projects" class="py-24 bg-neo-yellow border-t-4 border-neo-black px-4 overflow-hidden">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-6xl md:text-9xl font-black mb-16 uppercase tracking-tighter text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)] text-stroke-black"
-                style="-webkit-text-stroke: 3px black;">
+            <h2 class="text-6xl md:text-9xl font-black mb-16 uppercase tracking-tighter text-white drop-shadow-[4px_4px_0_rgba(15,23,42,1)] text-stroke-black"
+                style="-webkit-text-stroke: 3px #0F172A;">
                 Selected Works
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <article class="reveal group bg-white border-4 border-black p-4 shadow-hard">
+                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard">
                     <div
-                        class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
+                        class="bg-neo-black border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
                         <img src="assets/images/wedding-portfolio.png"
                             alt="Wedding Portfolio - Wedding services showcase by Pandurang Lad"
                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.parentElement.innerHTML='<span class=\'text-white font-mono text-sm\'>Wedding Portfolio</span>'">
@@ -712,15 +756,15 @@
                             </div>
                         </div>
                         <a href="#"
-                            class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
                             <i class="ri-arrow-right-up-line text-2xl"></i>
                         </a>
                     </div>
                 </article>
 
-                <article class="reveal group bg-white border-4 border-black p-4 shadow-hard mt-0 md:mt-20">
+                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard mt-0 md:mt-20">
                     <div
-                        class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
+                        class="bg-neo-black border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
                         <img src="assets/images/jjc-trust.png"
                             alt="JJC Kalanagari Trust - Donation platform by Pandurang Lad"
                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.parentElement.innerHTML='<span class=\'text-white font-mono text-sm\'>JJC Kalanagari Trust</span>'">
@@ -739,15 +783,15 @@
                             </div>
                         </div>
                         <a href="#"
-                            class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
                             <i class="ri-arrow-right-up-line text-2xl"></i>
                         </a>
                     </div>
                 </article>
 
-                <article class="reveal group bg-white border-4 border-black p-4 shadow-hard">
+                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard">
                     <div
-                        class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
+                        class="bg-neo-black border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
                         <img src="assets/images/eoto-foundation.png"
                             alt="EOTO Charitable Foundation - Donation and events platform by Pandurang Lad"
                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.parentElement.innerHTML='<span class=\'text-white font-mono text-sm\'>EOTO Foundation</span>'">
@@ -765,15 +809,15 @@
                             </div>
                         </div>
                         <a href="#"
-                            class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
                             <i class="ri-arrow-right-up-line text-2xl"></i>
                         </a>
                     </div>
                 </article>
 
-                <article class="reveal group bg-white border-4 border-black p-4 shadow-hard mt-0 md:mt-20">
+                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard mt-0 md:mt-20">
                     <div
-                        class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
+                        class="bg-neo-black border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
                         <img src="assets/images/aarav-infosys.png"
                             alt="Aarav Infosys - Dynamic website by Pandurang Lad"
                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.parentElement.innerHTML='<span class=\'text-white font-mono text-sm\'>Aarav Infosys</span>'">
@@ -791,15 +835,15 @@
                             </div>
                         </div>
                         <a href="#"
-                            class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
                             <i class="ri-arrow-right-up-line text-2xl"></i>
                         </a>
                     </div>
                 </article>
 
-                <article class="reveal group bg-white border-4 border-black p-4 shadow-hard">
+                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard">
                     <div
-                        class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
+                        class="bg-neo-black border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
                         <img src="assets/images/hobyhub.png"
                             alt="HobyHub - Community platform for hobby enthusiasts by Pandurang Lad"
                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.parentElement.innerHTML='<span class=\'text-white font-mono text-sm\'>HobyHub</span>'">
@@ -816,7 +860,7 @@
                             </div>
                         </div>
                         <a href="#"
-                            class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
                             <i class="ri-arrow-right-up-line text-2xl"></i>
                         </a>
                     </div>
@@ -826,21 +870,21 @@
 
             <div class="text-center mt-24">
                 <a href="https://github.com/dev-mauli?tab=repositories"
-                    class="inline-block bg-neo-black text-white px-12 py-5 font-bold font-mono text-xl hover:bg-neo-white hover:text-black border-4 border-black transition-all shadow-hard hover:shadow-none cursor-hover">
+                    class="inline-block bg-neo-black text-white px-12 py-5 font-bold font-mono text-xl hover:bg-neo-white hover:text-black border-4 border-neo-black transition-all shadow-hard hover:shadow-none cursor-hover">
                     VIEW ALL REPOS ON GITHUB
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="achievements" class="py-24 bg-neo-black border-t-4 border-black overflow-hidden relative">
+    <section id="achievements" class="py-24 bg-neo-black border-t-4 border-neo-black overflow-hidden relative">
         <div class="max-w-7xl mx-auto px-4">
             <div
                 class="flex items-center gap-2 mb-16 bg-white/5 border-2 border-white/10 p-4 inline-flex shadow-hard shadow-neo-blue/20">
                 <div class="flex gap-2">
-                    <div class="h-3 w-3 bg-red-500 rounded-full border border-black"></div>
-                    <div class="h-3 w-3 bg-yellow-500 rounded-full border border-black"></div>
-                    <div class="h-3 w-3 bg-green-500 rounded-full border border-black"></div>
+                    <div class="h-3 w-3 bg-red-500 rounded-full border border-neo-black"></div>
+                    <div class="h-3 w-3 bg-yellow-500 rounded-full border border-neo-black"></div>
+                    <div class="h-3 w-3 bg-green-500 rounded-full border border-neo-black"></div>
                 </div>
                 <h2 class="font-mono text-white text-xl font-bold ml-4 tracking-tighter">NOTABLE_ACHIEVEMENTS.txt</h2>
                 <div class="ml-8 px-2 bg-neo-blue text-black text-[10px] font-black uppercase">RECOGNIZED</div>
@@ -1036,9 +1080,9 @@
     </section>
 
     <section id="contact" class="py-24 px-4 max-w-5xl mx-auto">
-        <div class="bg-white border-4 border-black shadow-hard-xl p-8 md:p-12 relative reveal mt-12">
+        <div class="bg-white border-4 border-neo-black shadow-hard-xl p-8 md:p-12 relative reveal mt-12">
             <div
-                class="absolute -top-10 -left-6 bg-neo-yellow border-4 border-black px-6 py-2 shadow-hard rotate-[-5deg]">
+                class="absolute -top-10 -left-6 bg-neo-yellow border-4 border-neo-black px-6 py-2 shadow-hard rotate-[-5deg]">
                 <span class="font-black text-2xl">START A PROJECT</span>
             </div>
 
@@ -1051,7 +1095,7 @@
                     <div class="space-y-4">
                         <div class="flex items-center gap-4">
                             <div
-                                class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-black">
+                                class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-neo-black">
                                 <i class="ri-mail-line text-xl"></i>
                             </div>
                             <a href="mailto:premlad961@gmail.com"
@@ -1059,40 +1103,40 @@
                         </div>
                         <div class="flex items-center gap-4">
                             <div
-                                class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-black">
+                                class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-neo-black">
                                 <i class="ri-phone-line text-xl"></i>
                             </div>
                             <a href="tel:+919619626541" class="text-xl font-bold hover:bg-neo-blue cursor-hover">+91-9619626541</a>
                         </div>
                         <div class="flex items-center gap-4">
                             <div
-                                class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-black">
+                                class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-neo-black">
                                 <i class="ri-map-pin-line text-xl"></i>
                             </div>
-                            <span class="text-xl font-bold">Nallasopara East, Mumbai</span>
+                            <span class="text-xl font-bold">Mumbai, Maharashtra, India</span>
                         </div>
                     </div>
                 </div>
 
-                <form id="contact-form" class="space-y-6 bg-gray-50 p-6 border-2 border-black"
+                <form id="contact-form" class="space-y-6 bg-gray-50 p-6 border-2 border-neo-black"
                     onsubmit="event.preventDefault(); this.innerHTML='<div class=\'py-20 text-center\'><i class=\'ri-checkbox-circle-fill text-6xl text-neo-green mb-4 block\'></i><h3 class=\'text-2xl font-black uppercase\'>Transmission Received</h3><p class=\'font-mono text-sm mt-2\'>System response initialized. I will reach out shortly.</p></div>'">
                     <div class="flex flex-col">
                         <label class="font-mono font-bold mb-1 uppercase text-xs">Identity</label>
                         <input type="text" placeholder="NAME / COMPANY"
-                            class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover">
+                            class="bg-white border-2 border-neo-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover">
                     </div>
                     <div class="flex flex-col">
                         <label class="font-mono font-bold mb-1 uppercase text-xs">Coordinates</label>
                         <input type="email" placeholder="EMAIL ADDRESS"
-                            class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover">
+                            class="bg-white border-2 border-neo-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover">
                     </div>
                     <div class="flex flex-col">
                         <label class="font-mono font-bold mb-1 uppercase text-xs">Transmission</label>
                         <textarea rows="4" placeholder="PROJECT DETAILS..."
-                            class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all resize-none cursor-hover"></textarea>
+                            class="bg-white border-2 border-neo-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all resize-none cursor-hover"></textarea>
                     </div>
                     <button type="submit"
-                        class="w-full bg-neo-blue text-white font-black text-xl py-4 border-2 border-black shadow-hard neo-button hover:bg-neo-black hover:translate-y-1 hover:shadow-none transition-all cursor-hover">
+                        class="w-full bg-neo-blue text-white font-black text-xl py-4 border-2 border-neo-black shadow-hard neo-button hover:bg-neo-black hover:translate-y-1 hover:shadow-none transition-all cursor-hover">
                         TRANSMIT DATA
                     </button>
                 </form>
@@ -1100,7 +1144,7 @@
         </div>
     </section>
 
-    <footer class="bg-black text-white py-16 px-4 border-t-8 border-neo-green font-mono relative overflow-hidden">
+    <footer class="bg-neo-black text-white py-16 px-4 border-t-8 border-neo-blue font-mono relative overflow-hidden">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
             <div class="col-span-1 md:col-span-2">
                 <h2 class="text-4xl font-black mb-6">PANDURANG LAD.</h2>
@@ -1166,7 +1210,7 @@
             el.addEventListener('mouseenter', () => {
                 cursor.style.width = '60px';
                 cursor.style.height = '60px';
-                cursor.style.backgroundColor = '#FBFF48'; // Neo Yellow
+                cursor.style.backgroundColor = '#FBBF24'; // Neo Yellow
                 cursor.style.mixBlendMode = 'normal';
                 cursor.style.border = '2px solid black';
             });
@@ -1231,6 +1275,67 @@
 
         // Call on page load
         fetchGitHubStats();
+
+        // Live Memory Usage (Chrome: actual JS heap | Fallback: simulated live value)
+        function initMemoryUsage() {
+            const el = document.getElementById('memory-usage') || document.querySelector('[data-memory-usage]');
+            if (!el) return;
+            let baseMb = 95;
+            function update() {
+                let mb;
+                try {
+                    if (performance.memory && performance.memory.usedJSHeapSize) {
+                        mb = Math.round(performance.memory.usedJSHeapSize / 1024 / 1024);
+                    } else {
+                        baseMb = Math.max(60, Math.min(180, baseMb + (Math.random() - 0.5) * 12));
+                        mb = Math.round(baseMb);
+                    }
+                } catch (e) {
+                    baseMb = Math.max(60, Math.min(180, baseMb + (Math.random() - 0.5) * 12));
+                    mb = Math.round(baseMb);
+                }
+                el.textContent = mb + 'MB';
+                el.style.color = mb > 200 ? '#F43F5E' : (mb > 150 ? '#FBBF24' : '#10B981');
+            }
+            update();
+            setInterval(update, 2000);
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initMemoryUsage);
+        } else {
+            initMemoryUsage();
+        }
+
+        // Dynamic experience duration (updates when month changes)
+        function getMonthDiff(start, end) {
+            const months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+            return months;
+        }
+        function formatDuration(months) {
+            const yrs = Math.floor(months / 12);
+            const mos = months % 12;
+            if (yrs === 0) return mos + ' mos';
+            if (mos === 0) return yrs + (yrs === 1 ? ' yr' : ' yrs');
+            return yrs + (yrs === 1 ? ' yr' : ' yrs') + ' ' + mos + ' mos';
+        }
+        function updateExperienceDurations() {
+            document.querySelectorAll('[data-start]').forEach(el => {
+                const startStr = el.getAttribute('data-start');
+                const endStr = el.getAttribute('data-end');
+                if (!startStr) return;
+                const [y, m] = startStr.split('-').map(Number);
+                const start = new Date(y, m - 1, 1);
+                const end = endStr === 'present' ? new Date() : (() => { const [ey, em] = endStr.split('-').map(Number); return new Date(ey, em - 1, 1); })();
+                const months = getMonthDiff(start, end);
+                const baseText = el.getAttribute('data-label') || el.textContent.split(' · ')[0];
+                el.textContent = baseText + ' · ' + formatDuration(months);
+            });
+        }
+        const techEl = document.getElementById('exp-techmahindra');
+        if (techEl) {
+            techEl.setAttribute('data-label', 'April 2022 – Present');
+            updateExperienceDurations();
+        }
 
         // Scroll Reveal Logic
         const revealElements = document.querySelectorAll('.reveal');

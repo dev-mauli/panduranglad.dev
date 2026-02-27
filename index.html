@@ -167,6 +167,38 @@
             }
         }
 
+        /* Hide scrollbar for Notable_Achievements on mobile */
+        #achievements h2::-webkit-scrollbar {
+            display: none;
+        }
+        #achievements h2 {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Certificate/Image modal - animation & stacking */
+        #cert-modal {
+            z-index: 99999;
+            animation: cert-modal-bg-in 0.25s ease-out forwards;
+        }
+        #cert-modal.hidden {
+            animation: none;
+        }
+        #cert-modal-img.modal-pop-in {
+            animation: cert-modal-img-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        @keyframes cert-modal-bg-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes cert-modal-img-in {
+            from { opacity: 0; transform: scale(0.7); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        body.modal-open {
+            overflow: hidden;
+        }
+
         /* Reveal Animation */
         .reveal {
             opacity: 0;
@@ -345,8 +377,8 @@
         </div>
 
         <div class="max-w-[1400px] mx-auto px-4 relative z-10">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b-4 border-white pb-4">
-                <h2 class="text-6xl md:text-8xl font-black uppercase text-white tracking-tighter">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b-4 border-white pb-4">
+                <h2 class="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase text-white tracking-tighter break-words">
                     TECH<span class="text-neo-green">_STACK</span>
                 </h2>
                 <div class="flex items-center gap-2 mb-2 md:mb-4">
@@ -462,7 +494,7 @@
     </section>
 
     <section id="experience" class="py-24 px-4 max-w-7xl mx-auto">
-        <h2 class="text-5xl md:text-8xl font-black uppercase mb-12 tracking-tighter text-center">
+        <h2 class="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase mb-12 tracking-tighter text-center px-2 break-words">
             Experience<span class="text-neo-red">_Log</span>
         </h2>
 
@@ -529,7 +561,7 @@
         </div>
 
         <!-- Education -->
-        <h2 class="text-4xl md:text-6xl font-black uppercase mb-8 tracking-tighter text-center mt-20">
+        <h2 class="text-3xl sm:text-4xl md:text-6xl font-black uppercase mb-8 tracking-tighter text-center mt-20 px-2 break-words">
             Education<span class="text-neo-purple">_Log</span>
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -549,21 +581,41 @@
     <!-- Notable Achievements - Certificate Wall: gradient flows with page (white → cream → yellow) -->
     <section id="achievements" class="py-24 relative overflow-hidden border-y-4 border-neo-black" style="background: linear-gradient(180deg, #FFFFFF 0%, #FFFBEB 15%, #FEF3C7 40%, #FDE68A 70%, #FBBF24 100%);">
         <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <h2 class="text-5xl md:text-8xl font-black uppercase mb-4 tracking-tighter text-center text-neo-black" style="text-shadow: 3px 3px 0 rgba(236,72,153,0.3);">
+            <h2 class="text-2xl sm:text-3xl md:text-6xl lg:text-8xl font-black uppercase mb-4 tracking-tighter text-center text-neo-black px-2 whitespace-nowrap overflow-x-auto" style="text-shadow: 3px 3px 0 rgba(236,72,153,0.3);">
                 Notable<span class="text-neo-pink">_</span>Achievements
             </h2>
             <p class="font-mono text-center text-neo-black/70 mb-12 max-w-xl mx-auto">Awards & recognitions</p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Certificate card template: framed cert with ribbon -->
-                <!-- 1. Pat on the Back Award - Mar 2025 -->
+                <!-- Latest first -->
+                <!-- 1. Standing Ovation Award - Dec 2025 -->
+                <article class="reveal group relative">
+                    <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-8 bg-neo-orange border-2 border-neo-black rounded-t-lg flex items-center justify-center shadow-hard-sm z-10">
+                        <i class="ri-medal-fill text-neo-black text-lg"></i>
+                    </div>
+                    <div class="bg-white border-4 border-neo-black pt-6 pb-0 shadow-hard hover:shadow-hard-xl transition-all overflow-hidden">
+                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-pink/20 to-neo-red/20 flex items-center justify-center border-2 border-neo-black relative overflow-hidden cursor-pointer" onclick="openCertModal('assets/certificates/standing-ovation-2025.jpg');">
+                            <img src="assets/certificates/standing-ovation-2025.jpg" alt="Standing Ovation Award 2025" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
+                            <div class="absolute inset-0 hidden flex-col items-center justify-center gap-2 text-neo-black/60 bg-white/80 cert-fallback">
+                                <i class="ri-medal-line text-5xl"></i>
+                                <span class="font-mono text-sm">Add certificate image</span>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-2 border-t-2 border-dashed border-neo-black/20 bg-neo-white/50">
+                            <h3 class="font-black text-lg uppercase text-neo-black mb-1">Standing Ovation Award</h3>
+                            <p class="font-mono text-xs text-neo-black/70">Tech Mahindra · Dec 2025</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Pat on the Back Award - Mar 2025 -->
                 <article class="reveal group relative">
                     <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-8 bg-neo-pink border-2 border-neo-black rounded-t-lg flex items-center justify-center shadow-hard-sm z-10">
                         <i class="ri-award-fill text-neo-black text-lg"></i>
                     </div>
                     <div class="bg-white border-4 border-neo-black pt-6 pb-0 shadow-hard hover:shadow-hard-xl transition-all overflow-hidden">
-                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-yellow/30 to-neo-pink/20 flex items-center justify-center border-2 border-neo-black relative overflow-hidden">
-                            <img src="assets/certificates/pat-on-back-2025.png" alt="Pat on the Back Award 2025" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
+                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-yellow/30 to-neo-pink/20 flex items-center justify-center border-2 border-neo-black relative overflow-hidden cursor-pointer" onclick="openCertModal('assets/certificates/pat-on-back-2025.jpg');">
+                            <img src="assets/certificates/pat-on-back-2025.jpg" alt="Pat on the Back Award 2025" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
                             <div class="absolute inset-0 hidden flex-col items-center justify-center gap-2 text-neo-black/60 bg-white/80 cert-fallback">
                                 <i class="ri-award-line text-5xl"></i>
                                 <span class="font-mono text-sm">Add certificate image</span>
@@ -576,14 +628,14 @@
                     </div>
                 </article>
 
-                <!-- 2. WatsonX Challenge 1st Prize - Oct 2023 -->
+                <!-- 3. WatsonX Challenge 1st Prize - Oct 2023 -->
                 <article class="reveal group relative">
                     <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-8 bg-neo-blue border-2 border-neo-black rounded-t-lg flex items-center justify-center shadow-hard-sm z-10">
                         <i class="ri-trophy-fill text-neo-black text-lg"></i>
                     </div>
                     <div class="bg-white border-4 border-neo-black pt-6 pb-0 shadow-hard hover:shadow-hard-xl transition-all overflow-hidden">
-                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-blue/20 to-neo-purple/20 flex items-center justify-center border-2 border-neo-black relative overflow-hidden">
-                            <img src="assets/certificates/watsonx-challenge-2023.png" alt="WatsonX Challenge 1st Prize" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
+                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-blue/20 to-neo-purple/20 flex items-center justify-center border-2 border-neo-black relative overflow-hidden cursor-pointer" onclick="openCertModal('assets/certificates/watsonx-challenge-2023.jpg');">
+                            <img src="assets/certificates/watsonx-challenge-2023.jpg" alt="WatsonX Challenge 1st Prize" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
                             <div class="absolute inset-0 hidden flex-col items-center justify-center gap-2 text-neo-black/60 bg-white/80 cert-fallback">
                                 <i class="ri-trophy-line text-5xl"></i>
                                 <span class="font-mono text-sm">Add certificate image</span>
@@ -596,13 +648,13 @@
                     </div>
                 </article>
 
-                <!-- 3. Standing Ovation Award - Jun 2023 -->
+                <!-- 4. Standing Ovation Award - Jun 2023 -->
                 <article class="reveal group relative">
                     <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-8 bg-neo-red border-2 border-neo-black rounded-t-lg flex items-center justify-center shadow-hard-sm z-10">
                         <i class="ri-medal-fill text-neo-black text-lg"></i>
                     </div>
                     <div class="bg-white border-4 border-neo-black pt-6 pb-0 shadow-hard hover:shadow-hard-xl transition-all overflow-hidden">
-                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-pink/20 to-neo-red/20 flex items-center justify-center border-2 border-neo-black relative overflow-hidden">
+                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-pink/20 to-neo-red/20 flex items-center justify-center border-2 border-neo-black relative overflow-hidden cursor-pointer" onclick="openCertModal('assets/certificates/standing-ovation-2023.png');">
                             <img src="assets/certificates/standing-ovation-2023.png" alt="Standing Ovation Award" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
                             <div class="absolute inset-0 hidden flex-col items-center justify-center gap-2 text-neo-black/60 bg-white/80 cert-fallback">
                                 <i class="ri-medal-line text-5xl"></i>
@@ -616,14 +668,14 @@
                     </div>
                 </article>
 
-                <!-- 4. Pat on the Back Award - Nov 2022 -->
+                <!-- 5. Pat on the Back Award - Nov 2022 -->
                 <article class="reveal group relative">
                     <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-8 bg-neo-purple border-2 border-neo-black rounded-t-lg flex items-center justify-center shadow-hard-sm z-10">
                         <i class="ri-award-fill text-white text-lg"></i>
                     </div>
                     <div class="bg-white border-4 border-neo-black pt-6 pb-0 shadow-hard hover:shadow-hard-xl transition-all overflow-hidden">
-                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-purple/20 to-neo-blue/20 flex items-center justify-center border-2 border-neo-black relative overflow-hidden">
-                            <img src="assets/certificates/pat-on-back-2022.png" alt="Pat on the Back Award 2022" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
+                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-purple/20 to-neo-blue/20 flex items-center justify-center border-2 border-neo-black relative overflow-hidden cursor-pointer" onclick="openCertModal('assets/certificates/pat-on-back-2022.jpeg');">
+                            <img src="assets/certificates/pat-on-back-2022.jpeg" alt="Pat on the Back Award 2022" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
                             <div class="absolute inset-0 hidden flex-col items-center justify-center gap-2 text-neo-black/60 bg-white/80 cert-fallback">
                                 <i class="ri-award-line text-5xl"></i>
                                 <span class="font-mono text-sm">Add certificate image</span>
@@ -636,14 +688,14 @@
                     </div>
                 </article>
 
-                <!-- 5. Best NSS Volunteer - Mar 2017 -->
+                <!-- 6. Best NSS Volunteer - Mar 2017 -->
                 <article class="reveal group relative">
                     <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-8 bg-neo-green border-2 border-neo-black rounded-t-lg flex items-center justify-center shadow-hard-sm z-10">
                         <i class="ri-user-heart-fill text-neo-black text-lg"></i>
                     </div>
                     <div class="bg-white border-4 border-neo-black pt-6 pb-0 shadow-hard hover:shadow-hard-xl transition-all overflow-hidden">
-                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-green/20 to-neo-yellow/30 flex items-center justify-center border-2 border-neo-black relative overflow-hidden">
-                            <img src="assets/certificates/best-nss-volunteer-2017.png" alt="Best NSS Volunteer" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
+                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-green/20 to-neo-yellow/30 flex items-center justify-center border-2 border-neo-black relative overflow-hidden cursor-pointer" onclick="openCertModal('assets/certificates/best-nss-volunteer-2017.jpg');">
+                            <img src="assets/certificates/best-nss-volunteer-2017.jpg" alt="Best NSS Volunteer" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
                             <div class="absolute inset-0 hidden flex-col items-center justify-center gap-2 text-neo-black/60 bg-white/80 cert-fallback">
                                 <i class="ri-user-heart-line text-5xl"></i>
                                 <span class="font-mono text-sm">Add certificate image</span>
@@ -656,27 +708,6 @@
                         </div>
                     </div>
                 </article>
-
-                <!-- 6. Avhan Disaster Preparedness - Jun 2016 -->
-                <article class="reveal group relative">
-                    <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-8 bg-neo-orange border-2 border-neo-black rounded-t-lg flex items-center justify-center shadow-hard-sm z-10">
-                        <i class="ri-shield-check-fill text-neo-black text-lg"></i>
-                    </div>
-                    <div class="bg-white border-4 border-neo-black pt-6 pb-0 shadow-hard hover:shadow-hard-xl transition-all overflow-hidden">
-                        <div class="aspect-[4/3] mx-3 mb-3 bg-gradient-to-br from-neo-orange/20 to-neo-yellow/30 flex items-center justify-center border-2 border-neo-black relative overflow-hidden">
-                            <img src="assets/certificates/avhan-disaster-2016.png" alt="Avhan Disaster Preparedness" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');">
-                            <div class="absolute inset-0 hidden flex-col items-center justify-center gap-2 text-neo-black/60 bg-white/80 cert-fallback">
-                                <i class="ri-shield-check-line text-5xl"></i>
-                                <span class="font-mono text-sm">Add certificate image</span>
-                            </div>
-                        </div>
-                        <div class="p-4 pt-2 border-t-2 border-dashed border-neo-black/20 bg-neo-white/50">
-                            <h3 class="font-black text-lg uppercase text-neo-black mb-1">State Level Avhan Disaster Preparedness</h3>
-                            <p class="font-mono text-xs text-neo-black/70">Maharashtra State Govt. · Jun 2016</p>
-                            <p class="font-mono text-[10px] text-neo-black/60 mt-1">Represented University of Mumbai. Learned MFR (Medical First Responder) from NDRF force.</p>
-                        </div>
-                    </div>
-                </article>
             </div>
         </div>
     </section>
@@ -685,56 +716,62 @@
     <section id="certifications" class="py-24 relative overflow-hidden border-y-4 border-neo-black" style="background: linear-gradient(180deg, #FBBF24 0%, #f58b3d 25%, #fc8c51 30%, #0891B2 80%, #0F172A 100%);">
         <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(rgba(255,255,255,0.4) 1.5px, transparent 1.5px); background-size: 32px 32px;"></div>
         <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <h2 class="text-5xl md:text-8xl font-black uppercase mb-4 tracking-tighter text-center text-white drop-shadow-[3px_3px_0_rgba(15,23,42,0.5)]" style="-webkit-text-stroke: 2px #0F172A;">
+            <h2 class="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase mb-4 tracking-tighter text-center text-white drop-shadow-[3px_3px_0_rgba(15,23,42,0.5)] px-2 break-words" style="-webkit-text-stroke: 2px #0F172A;">
                 Certifications<span class="text-neo-yellow">_</span>
             </h2>
             <p class="font-mono text-center text-white/80 mb-12 max-w-xl mx-auto">Verified credentials on Credly</p>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 <!-- 1. Create media search and media recommendations - Google Cloud -->
-                <a href="https://www.credly.com/badges/76060c47-4fc7-45a9-973f-d246f5cb4492/public_url" target="_blank" rel="noopener noreferrer" class="reveal group block">
+                <article class="reveal group">
                     <div class="bg-white border-4 border-neo-black p-6 shadow-hard hover:shadow-hard-xl transition-all hover:-translate-y-1 flex flex-col items-center text-center">
-                        <div class="w-40 h-40 md:w-48 md:h-48 rounded-2xl bg-gradient-to-br from-neo-blue to-neo-purple border-4 border-neo-black flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-hard-sm overflow-hidden relative">
+                        <div class="w-40 h-40 md:w-48 md:h-48 rounded-2xl bg-gradient-to-br from-neo-blue to-neo-purple border-4 border-neo-black flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-hard-sm overflow-hidden relative cursor-pointer" onclick="openCertModal('assets/certificates/create-media-search-and-media-recommendations-appli.png');">
                             <img src="assets/certificates/create-media-search-and-media-recommendations-appli.png" alt="Create media search and media recommendations with AI Applications" class="absolute inset-0 w-full h-full object-contain p-2" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');">
                             <div class="hidden absolute inset-0 flex flex-col items-center justify-center gap-1 text-white bg-gradient-to-br from-neo-blue to-neo-purple">
                                 <i class="ri-robot-2-fill text-4xl"></i>
                                 <span class="font-mono text-xs">Badge</span>
                             </div>
                         </div>
-                        <h3 class="font-black text-lg uppercase text-neo-black mb-1 group-hover:text-neo-blue transition-colors">Create Media Search & Recommendations with AI</h3>
+                        <a href="https://www.credly.com/badges/76060c47-4fc7-45a9-973f-d246f5cb4492/public_url" target="_blank" rel="noopener noreferrer" class="block mb-1">
+                            <h3 class="font-black text-lg uppercase text-neo-black group-hover:text-neo-blue transition-colors hover:underline">Create Media Search & Recommendations with AI</h3>
+                        </a>
                         <p class="font-mono text-xs text-neo-black/70">Google Cloud · Vertex AI, Generative AI</p>
                     </div>
-                </a>
+                </article>
 
                 <!-- 2. Build search and recommendations - Google Cloud -->
-                <a href="https://www.credly.com/badges/b4a91d4a-e3a9-4f51-9e26-5e108100d310/public_url" target="_blank" rel="noopener noreferrer" class="reveal group block">
+                <article class="reveal group">
                     <div class="bg-white border-4 border-neo-black p-6 shadow-hard hover:shadow-hard-xl transition-all hover:-translate-y-1 flex flex-col items-center text-center md:mt-10">
-                        <div class="w-40 h-40 md:w-48 md:h-48 rounded-2xl bg-gradient-to-br from-neo-orange to-neo-yellow border-4 border-neo-black flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-hard-sm overflow-hidden relative">
+                        <div class="w-40 h-40 md:w-48 md:h-48 rounded-2xl bg-gradient-to-br from-neo-orange to-neo-yellow border-4 border-neo-black flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-hard-sm overflow-hidden relative cursor-pointer" onclick="openCertModal('assets/certificates/build-search-and-recommendations-applications-with-.png');">
                             <img src="assets/certificates/build-search-and-recommendations-applications-with-.png" alt="Build search and recommendations applications with AI" class="absolute inset-0 w-full h-full object-contain p-2" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');">
                             <div class="hidden absolute inset-0 flex flex-col items-center justify-center gap-1 text-neo-black bg-gradient-to-br from-neo-orange/30 to-neo-yellow/30">
                                 <i class="ri-search-eye-fill text-4xl"></i>
                                 <span class="font-mono text-xs">Badge</span>
                             </div>
                         </div>
-                        <h3 class="font-black text-lg uppercase text-neo-black mb-1 group-hover:text-neo-orange transition-colors">Build Search & Recommendations with AI</h3>
+                        <a href="https://www.credly.com/badges/b4a91d4a-e3a9-4f51-9e26-5e108100d310/public_url" target="_blank" rel="noopener noreferrer" class="block mb-1">
+                            <h3 class="font-black text-lg uppercase text-neo-black group-hover:text-neo-orange transition-colors hover:underline">Build Search & Recommendations with AI</h3>
+                        </a>
                         <p class="font-mono text-xs text-neo-black/70">Google Cloud · Gemini, RAG, Enterprise Search</p>
                     </div>
-                </a>
+                </article>
 
                 <!-- 3. AZ-204 Developing Solutions for Microsoft Azure -->
-                <a href="https://www.credly.com/badges/c95a3642-14ed-4720-85ea-1cbb478b0043/public_url" target="_blank" rel="noopener noreferrer" class="reveal group block">
+                <article class="reveal group">
                     <div class="bg-white border-4 border-neo-black p-6 shadow-hard hover:shadow-hard-xl transition-all hover:-translate-y-1 flex flex-col items-center text-center">
-                        <div class="w-40 h-40 md:w-48 md:h-48 rounded-2xl bg-gradient-to-br from-neo-green to-neo-blue border-4 border-neo-black flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-hard-sm overflow-hidden relative">
+                        <div class="w-40 h-40 md:w-48 md:h-48 rounded-2xl bg-gradient-to-br from-neo-green to-neo-blue border-4 border-neo-black flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-hard-sm overflow-hidden relative cursor-pointer" onclick="openCertModal('assets/certificates/az-204-developing-solutions-for-microsoft-azure.png');">
                             <img src="assets/certificates/az-204-developing-solutions-for-microsoft-azure.png" alt="AZ-204 Developing Solutions for Microsoft Azure" class="absolute inset-0 w-full h-full object-contain p-2" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');">
                             <div class="hidden absolute inset-0 flex flex-col items-center justify-center gap-1 text-white bg-gradient-to-br from-neo-green to-neo-blue">
                                 <i class="ri-microsoft-fill text-4xl"></i>
                                 <span class="font-mono text-xs">Badge</span>
                             </div>
                         </div>
-                        <h3 class="font-black text-lg uppercase text-neo-black mb-1 group-hover:text-neo-green transition-colors">AZ-204 Developing Solutions for Microsoft Azure</h3>
+                        <a href="https://www.credly.com/badges/c95a3642-14ed-4720-85ea-1cbb478b0043/public_url" target="_blank" rel="noopener noreferrer" class="block mb-1">
+                            <h3 class="font-black text-lg uppercase text-neo-black group-hover:text-neo-green transition-colors hover:underline">AZ-204 Developing Solutions for Microsoft Azure</h3>
+                        </a>
                         <p class="font-mono text-xs text-neo-black/70">Koenig Solutions · Microsoft Azure</p>
                     </div>
-                </a>
+                </article>
             </div>
 
             <div class="flex justify-center">
@@ -756,7 +793,7 @@
         <div class="max-w-7xl mx-auto px-4 relative z-10">
             <!-- Header -->
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-                <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter break-words">
                     <span class="text-white">DEV</span><span class="text-neo-green">_ACTIVITY</span>
                 </h2>
                 <div class="flex items-center gap-3 flex-wrap">
@@ -934,12 +971,120 @@
 
     <section id="projects" class="py-24 bg-neo-yellow border-t-4 border-neo-black px-4 overflow-hidden">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-6xl md:text-9xl font-black mb-16 uppercase tracking-tighter text-white drop-shadow-[4px_4px_0_rgba(15,23,42,1)] text-stroke-black"
+            <h2 class="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-black mb-16 uppercase tracking-tighter text-white drop-shadow-[4px_4px_0_rgba(15,23,42,1)] text-stroke-black px-2 break-words"
                 style="-webkit-text-stroke: 3px #0F172A;">
                 Projects
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Feb 2026 - newest -->
+                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard">
+                    <a href="https://foodraksha.com/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
+                        <iframe src="https://foodraksha.com/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                    </a>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-orange transition-colors glitch-hover">FoodRaksha</h3>
+                            <div class="flex gap-2 items-center mb-3 flex-wrap">
+                                <span class="font-mono text-xs font-bold bg-neo-green text-black px-2 py-1 border-2 border-neo-black">In Progress</span>
+                                <span class="font-mono text-xs font-bold bg-neo-black text-white px-2 py-1">Feb 2026</span>
+                            </div>
+                            <p class="font-mono text-sm mb-4 max-w-xs">FSSAI license application, modification, renewal. Product endorsements for organic and vegan certification. Expert compliance support.</p>
+                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                                <span class="bg-neo-black text-white px-2 py-1">.NET MVC</span>
+                                <span class="bg-neo-black text-white px-2 py-1">SQL Server</span>
+                                <span class="bg-neo-black text-white px-2 py-1">FSSAI</span>
+                            </div>
+                        </div>
+                        <a href="https://foodraksha.com/" target="_blank" rel="noopener noreferrer"
+                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                            <i class="ri-arrow-right-up-line text-2xl"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Dec 2025 -->
+                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard mt-0 md:mt-20">
+                    <a href="https://snvsamaj.in/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
+                        <iframe src="https://snvsamaj.in/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                    </a>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-blue transition-colors glitch-hover">SNV Samaj</h3>
+                            <div class="flex gap-2 items-center mb-3 flex-wrap">
+                                <span class="font-mono text-xs font-bold bg-neo-green text-black px-2 py-1 border-2 border-neo-black">In Progress</span>
+                                <span class="font-mono text-xs font-bold bg-neo-black text-white px-2 py-1">Dec 2025</span>
+                            </div>
+                            <p class="font-mono text-sm mb-4 max-w-xs">Community organization website for events, membership, and social initiatives.</p>
+                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                                <span class="bg-neo-black text-white px-2 py-1">Angular</span>
+                                <span class="bg-neo-black text-white px-2 py-1">.NET Core API</span>
+                                <span class="bg-neo-black text-white px-2 py-1">SQL Server</span>
+                                <span class="bg-neo-black text-white px-2 py-1">React Native</span>
+                                <span class="bg-neo-black text-white px-2 py-1">iOS</span>
+                            </div>
+                        </div>
+                        <a href="https://snvsamaj.in/" target="_blank" rel="noopener noreferrer"
+                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                            <i class="ri-arrow-right-up-line text-2xl"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Aug 2025 -->
+                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard">
+                    <a href="https://kokanswad.com/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
+                        <iframe src="https://kokanswad.com/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                    </a>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-green transition-colors glitch-hover">KokanSwad</h3>
+                            <div class="flex gap-2 items-center mb-3 flex-wrap">
+                                <span class="font-mono text-xs font-bold bg-neo-black text-white px-2 py-1">Aug 2025</span>
+                            </div>
+                            <p class="font-mono text-sm mb-4 max-w-xs">E-commerce for fresh Konkan products—Awla, Kokam, Mangoes. Doorstep delivery, 24x7 support, authentic regional produce.</p>
+                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                                <span class="bg-neo-black text-white px-2 py-1">Angular</span>
+                                <span class="bg-neo-black text-white px-2 py-1">.NET Core API</span>
+                                <span class="bg-neo-black text-white px-2 py-1">SQL Server</span>
+                            </div>
+                        </div>
+                        <a href="https://kokanswad.com/" target="_blank" rel="noopener noreferrer"
+                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                            <i class="ri-arrow-right-up-line text-2xl"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Mar 2025 -->
+                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard mt-0 md:mt-20">
+                    <a href="https://mybizmyqr.com/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
+                        <iframe src="https://mybizmyqr.com/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                    </a>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-purple transition-colors glitch-hover">MyBizMyQR</h3>
+                            <div class="flex gap-2 items-center mb-3 flex-wrap">
+                                <span class="font-mono text-xs font-bold bg-neo-black text-white px-2 py-1">Mar 2025</span>
+                            </div>
+                            <p class="font-mono text-sm mb-4 max-w-xs">Dynamic QR codes for businesses. Analytics dashboard, custom branding, real-time tracking. Connect physical and digital presence.</p>
+                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                                <span class="bg-neo-black text-white px-2 py-1">Angular</span>
+                                <span class="bg-neo-black text-white px-2 py-1">.NET Core API</span>
+                            </div>
+                        </div>
+                        <a href="https://mybizmyqr.com/" target="_blank" rel="noopener noreferrer"
+                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                            <i class="ri-arrow-right-up-line text-2xl"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Dec 2024 -->
                 <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard">
                     <a href="https://vidya-weds-pandurang.netlify.app/#/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
                         <iframe src="https://vidya-weds-pandurang.netlify.app/#/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
@@ -948,6 +1093,9 @@
                     <div class="flex justify-between items-start">
                         <div>
                             <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-red transition-colors glitch-hover">Vidya Weds Pandurang</h3>
+                            <div class="flex gap-2 items-center mb-3 flex-wrap">
+                                <span class="font-mono text-xs font-bold bg-neo-black text-white px-2 py-1">Dec 2024</span>
+                            </div>
                             <p class="font-mono text-sm mb-4 max-w-xs">Elegant wedding portfolio showcasing event details, gallery, and RSVP. Beautiful invitation experience on web.</p>
                             <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
                                 <span class="bg-neo-black text-white px-2 py-1">Angular</span>
@@ -962,29 +1110,8 @@
                     </div>
                 </article>
 
+                <!-- Jun 2024 -->
                 <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard mt-0 md:mt-20">
-                    <a href="https://www.eotoindia.org/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
-                        <iframe src="https://www.eotoindia.org/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
-                    </a>
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-pink transition-colors glitch-hover">EOTO India Foundation</h3>
-                            <p class="font-mono text-sm mb-4 max-w-xs">Charitable foundation platform for donations and events. CC Avenue payment gateway integration. Serving 10,000+ children since 1983.</p>
-                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
-                                <span class="bg-neo-black text-white px-2 py-1">.NET MVC</span>
-                                <span class="bg-neo-black text-white px-2 py-1">SQL Server</span>
-                                <span class="bg-neo-black text-white px-2 py-1">CC Avenue</span>
-                            </div>
-                        </div>
-                        <a href="https://www.eotoindia.org/" target="_blank" rel="noopener noreferrer"
-                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
-                            <i class="ri-arrow-right-up-line text-2xl"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard">
                     <a href="https://jjckalanagari.com/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
                         <iframe src="https://jjckalanagari.com/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
@@ -992,7 +1119,10 @@
                     <div class="flex justify-between items-start">
                         <div>
                             <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-blue transition-colors glitch-hover">JJC Kalanagari</h3>
-                            <p class="font-mono text-sm mb-4 max-w-xs">Yuva Mela registration and event platform. Payment integration, QR check-in, profile management. Jain community engagement.</p>
+                            <div class="flex gap-2 items-center mb-3 flex-wrap">
+                                <span class="font-mono text-xs font-bold bg-neo-black text-white px-2 py-1">Jun 2024</span>
+                            </div>
+                            <p class="font-mono text-sm mb-4 max-w-xs">Yuva Mela registration and event platform. PhonePe Payment Gateway integration, QR check-in, profile management. Jain community engagement.</p>
                             <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
                                 <span class="bg-neo-black text-white px-2 py-1">Angular</span>
                                 <span class="bg-neo-black text-white px-2 py-1">.NET Core API</span>
@@ -1007,87 +1137,26 @@
                     </div>
                 </article>
 
+                <!-- Sep 2023 - oldest -->
                 <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard mt-0 md:mt-20">
-                    <a href="https://mybizmyqr.com/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
-                        <iframe src="https://mybizmyqr.com/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
+                    <a href="https://www.eotoindia.org/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
+                        <iframe src="https://www.eotoindia.org/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
                     </a>
                     <div class="flex justify-between items-start">
                         <div>
-                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-purple transition-colors glitch-hover">MyBizMyQR</h3>
-                            <p class="font-mono text-sm mb-4 max-w-xs">Dynamic QR codes for businesses. Analytics dashboard, custom branding, real-time tracking. Connect physical and digital presence.</p>
-                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
-                                <span class="bg-neo-black text-white px-2 py-1">React</span>
-                                <span class="bg-neo-black text-white px-2 py-1">Node.js</span>
-                                <span class="bg-neo-black text-white px-2 py-1">MongoDB</span>
+                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-pink transition-colors glitch-hover">EOTO India Foundation</h3>
+                            <div class="flex gap-2 items-center mb-3 flex-wrap">
+                                <span class="font-mono text-xs font-bold bg-neo-black text-white px-2 py-1">Sep 2023</span>
                             </div>
-                        </div>
-                        <a href="https://mybizmyqr.com/" target="_blank" rel="noopener noreferrer"
-                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
-                            <i class="ri-arrow-right-up-line text-2xl"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard mt-0 md:mt-20">
-                    <a href="https://kokanswad.com/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
-                        <iframe src="https://kokanswad.com/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
-                    </a>
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-green transition-colors glitch-hover">KokanSwad</h3>
-                            <p class="font-mono text-sm mb-4 max-w-xs">E-commerce for fresh Konkan products—Awla, Kokam, Mangoes. Doorstep delivery, 24x7 support, authentic regional produce.</p>
-                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
-                                <span class="bg-neo-black text-white px-2 py-1">WordPress</span>
-                                <span class="bg-neo-black text-white px-2 py-1">WooCommerce</span>
-                                <span class="bg-neo-black text-white px-2 py-1">PHP</span>
-                            </div>
-                        </div>
-                        <a href="https://kokanswad.com/" target="_blank" rel="noopener noreferrer"
-                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
-                            <i class="ri-arrow-right-up-line text-2xl"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard">
-                    <a href="https://snvsamaj.in/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
-                        <iframe src="https://snvsamaj.in/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
-                    </a>
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-blue transition-colors glitch-hover">SNV Samaj</h3>
-                            <p class="font-mono text-sm mb-4 max-w-xs">Community organization website for events, membership, and social initiatives.</p>
+                            <p class="font-mono text-sm mb-4 max-w-xs">Charitable foundation platform for donations and events. CC Avenue payment gateway integration. Serving 10,000+ children since 1983.</p>
                             <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
                                 <span class="bg-neo-black text-white px-2 py-1">.NET MVC</span>
                                 <span class="bg-neo-black text-white px-2 py-1">SQL Server</span>
+                                <span class="bg-neo-black text-white px-2 py-1">CC Avenue</span>
                             </div>
                         </div>
-                        <a href="https://snvsamaj.in/" target="_blank" rel="noopener noreferrer"
-                            class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
-                            <i class="ri-arrow-right-up-line text-2xl"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard mt-0 md:mt-20">
-                    <a href="https://foodraksha.com/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
-                        <iframe src="https://foodraksha.com/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
-                    </a>
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-4xl font-black uppercase mb-2 group-hover:text-neo-orange transition-colors glitch-hover">FoodRaksha</h3>
-                            <p class="font-mono text-sm mb-4 max-w-xs">FSSAI license application, modification, renewal. Product endorsements for organic and vegan certification. Expert compliance support.</p>
-                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
-                                <span class="bg-neo-black text-white px-2 py-1">.NET MVC</span>
-                                <span class="bg-neo-black text-white px-2 py-1">SQL Server</span>
-                                <span class="bg-neo-black text-white px-2 py-1">FSSAI</span>
-                            </div>
-                        </div>
-                        <a href="https://foodraksha.com/" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.eotoindia.org/" target="_blank" rel="noopener noreferrer"
                             class="w-12 h-12 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
                             <i class="ri-arrow-right-up-line text-2xl"></i>
                         </a>
@@ -1139,7 +1208,7 @@
 
                 <form id="contact-form" class="space-y-6 bg-gray-50 p-6 border-2 border-neo-black">
                     <!-- Get your free access key at https://web3forms.com - replace below -->
-                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                    <input type="hidden" name="access_key" value="295eff65-c9f4-4f51-b8ca-d848656559b3">
                     <input type="hidden" name="subject" value="New contact from panduranglad.dev">
                     <input type="text" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
                     <div class="flex flex-col">
@@ -1234,6 +1303,14 @@
         </div>
     </footer>
 
+    <!-- Image lightbox modal - outside sections for proper stacking -->
+    <div id="cert-modal" class="fixed inset-0 hidden flex items-center justify-center bg-black/90 p-4" onclick="if(event.target===this)closeCertModal();">
+        <button class="absolute top-4 right-4 w-12 h-12 bg-white border-4 border-neo-black flex items-center justify-center hover:bg-neo-red hover:text-white transition-colors cursor-hover z-10" onclick="closeCertModal();" aria-label="Close">
+            <i class="ri-close-line text-2xl font-bold"></i>
+        </button>
+        <img id="cert-modal-img" src="" alt="Certificate" class="max-w-[80vw] max-h-[70vh] w-auto h-auto object-contain border-4 border-white shadow-2xl rounded">
+    </div>
+
     <!-- Back to Top Button -->
     <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"
         class="fixed bottom-8 right-8 z-50 w-12 h-12 bg-neo-yellow border-4 border-neo-black shadow-hard flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-neo-black hover:text-neo-yellow hover:translate-y-1 hover:shadow-none cursor-hover"
@@ -1255,6 +1332,25 @@
                 }
             });
         })();
+
+        // Certificate modal - open/close with body scroll lock & animation
+        function openCertModal(src) {
+            const img = document.getElementById('cert-modal-img');
+            img.classList.remove('modal-pop-in');
+            img.src = src;
+            img.alt = 'Certificate';
+            document.getElementById('cert-modal').classList.remove('hidden');
+            document.getElementById('cert-modal').classList.add('flex');
+            document.body.classList.add('modal-open');
+            img.offsetHeight; // reflow to restart animation
+            img.classList.add('modal-pop-in');
+        }
+        function closeCertModal() {
+            document.getElementById('cert-modal').classList.add('hidden');
+            document.getElementById('cert-modal').classList.remove('flex');
+            document.body.classList.remove('modal-open');
+            document.getElementById('cert-modal-img').classList.remove('modal-pop-in');
+        }
 
         // Contact Form - Web3Forms
         document.getElementById('contact-form').addEventListener('submit', async function(e) {

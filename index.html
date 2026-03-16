@@ -268,8 +268,10 @@
                     class="px-3 py-1 font-mono font-bold text-sm hover:bg-neo-black hover:text-white transition-colors cursor-hover">/LOGS</a>
                 <a href="#certifications"
                     class="px-3 py-1 font-mono font-bold text-sm hover:bg-neo-black hover:text-white transition-colors cursor-hover">/CERTS</a>
-                <a href="#projects"
-                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-neo-black hover:text-white transition-colors cursor-hover">/WORK</a>
+                <a href="#mini-projects"
+                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-neo-black hover:text-white transition-colors cursor-hover">/MINI</a>
+                <a href="#client-work"
+                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-neo-black hover:text-white transition-colors cursor-hover">/CLIENT</a>
                 <a href="#contact"
                     class="px-3 py-1 font-mono font-bold text-sm bg-neo-yellow border border-neo-black hover:bg-neo-pink transition-colors cursor-hover">HIRE
                     ME</a>
@@ -307,7 +309,7 @@
             </p>
 
             <div class="flex flex-col md:flex-row justify-center gap-6 reveal mb-16">
-                <a href="#projects"
+                <a href="#mini-projects"
                     class="bg-neo-black text-white border-2 border-neo-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-green hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover">
                     VIEW PROJECTS
                 </a>
@@ -969,11 +971,58 @@
         </div>
     </section>
 
-    <section id="projects" class="py-24 bg-neo-yellow border-t-4 border-neo-black px-4 overflow-hidden">
+    <!-- Mini Projects - Personal side projects -->
+    <section id="mini-projects" class="py-24 bg-neo-black text-neo-white border-t-4 border-neo-black relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: linear-gradient(rgba(139,92,246,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px); background-size: 40px 40px;"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b-4 border-white pb-4">
+                <h2 class="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase text-white tracking-tighter break-words">
+                    Mini<span class="text-neo-purple">_</span>Projects
+                </h2>
+                <p class="font-mono text-neo-green text-sm font-bold mt-2 md:mt-0">/// SIDE_PROJECTS</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+                <!-- Your Life in Data -->
+                <article class="reveal group bg-white border-4 border-neo-black p-4 shadow-hard hover:shadow-hard-xl hover:border-neo-purple transition-all">
+                    <a href="your-life-in-data/" target="_blank" rel="noopener noreferrer" class="block border-2 border-neo-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all bg-neo-black">
+                        <iframe src="your-life-in-data/" loading="lazy" scrolling="no" class="absolute top-0 left-0 w-[200%] h-[200%] border-0 pointer-events-none origin-top-left" style="transform:scale(0.5)"></iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                    </a>
+                    <div class="flex justify-between items-start">
+                        <div class="text-neo-black">
+                            <h3 class="text-2xl sm:text-3xl font-black uppercase mb-2 text-neo-black group-hover:text-neo-purple transition-colors glitch-hover">Your Life in Data</h3>
+                            <div class="flex gap-2 items-center mb-3 flex-wrap">
+                                <span class="font-mono text-xs font-bold bg-neo-green text-black px-2 py-1 border-2 border-neo-black">LIVE</span>
+                            </div>
+                            <p class="font-mono text-sm mb-4 max-w-xs text-gray-700">Convert your lifetime into meaningful statistics. Birth date → heartbeats, breaths, sunrises, meals. Beautiful shareable "Life Receipt" with 50+ stats.</p>
+                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap mb-4">
+                                <span class="bg-neo-black text-white px-2 py-1">HTML</span>
+                                <span class="bg-neo-black text-white px-2 py-1">CSS</span>
+                                <span class="bg-neo-black text-white px-2 py-1">JavaScript</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <a href="https://github.com/dev-mauli/your-life-in-data" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border-2 border-neo-black bg-neo-black text-white flex items-center justify-center hover:bg-neo-purple hover:border-neo-purple transition-all cursor-hover shadow-hard-sm" aria-label="View on GitHub">
+                                    <i class="ri-github-fill text-xl"></i>
+                                </a>
+                                <a href="your-life-in-data/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border-2 border-neo-black bg-neo-green flex items-center justify-center hover:bg-neo-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                                    <i class="ri-arrow-right-up-line text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Placeholder for future mini projects - easy to duplicate the article block -->
+            </div>
+        </div>
+    </section>
+
+    <section id="client-work" class="py-24 bg-neo-yellow border-t-4 border-neo-black px-4 overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-black mb-16 uppercase tracking-tighter text-white drop-shadow-[4px_4px_0_rgba(15,23,42,1)] text-stroke-black px-2 break-words"
                 style="-webkit-text-stroke: 3px #0F172A;">
-                Projects
+                Client<span class="text-neo-black">_</span>Work
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -1262,8 +1311,11 @@
                     <li><a href="#certifications"
                             class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">Certs</a>
                     </li>
-                    <li><a href="#projects"
-                            class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">Works</a>
+                    <li><a href="#mini-projects"
+                            class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">Mini</a>
+                    </li>
+                    <li><a href="#client-work"
+                            class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">Client Work</a>
                     </li>
                     <li><a href="#contact"
                             class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">Contact</a>
